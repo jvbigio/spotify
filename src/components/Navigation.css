@@ -1,0 +1,8 @@
+nav a {
+  text-decoration: none;
+}
+
+.active {
+  /* background-color: #00688B; */
+  color: whitesmoke;
+}
