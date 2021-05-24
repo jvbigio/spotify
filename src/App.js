@@ -1,4 +1,7 @@
 import './App.css'
+import Home from './pages/Home'
+import Search from './pages/Search'
+import Random from './pages/Random'
 
 function App () {
   return (
