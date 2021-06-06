@@ -8,11 +8,18 @@
   width: 100%;
 } */
 
+#form-icon {
+  border-radius: 25px 0 0 25px;
+}
+
 #form-search {
-  border-radius: 25px;
-  margin-top: 20px;
+  border-radius: 0 25px 25px 0 ;
   /* width: 50%; */
   /* width: 90%;
   display: flex;
   justify-content: center; */
+}
+
+#form-icon, #form-search {
+  margin-top: 20px;
 }
