@@ -19,9 +19,8 @@ const Search = () => {
           </Form.Group>
         </Form>
       </div>
-      <main className='content'>
-        {/* <Image className='bg' src={imageBG} fluid /> */}
-      </main>
+      {/* <main className='content'>
+      </main> */}
     </div>
   )
 }
