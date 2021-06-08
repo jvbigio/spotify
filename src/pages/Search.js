@@ -12,7 +12,7 @@ const Search = () => {
             <InputGroup.Prepend>
               <InputGroup.Text id='form-icon'><BsSearch /></InputGroup.Text>
             </InputGroup.Prepend>
-            <Form.Control type='text' aria-describedby='form-icon' placeholder='Artist, album, or song' />
+            <Form.Control type='text' placeholder='Artist, album, or song' />
           </InputGroup>
         </Form.Group>
       </Form>
