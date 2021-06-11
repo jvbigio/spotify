@@ -6,21 +6,24 @@ import imageBG from '../images/music-chord-bg.jpg'
 
 const Search = () => {
   return (
-    <div className='container'>
-      <div className='search-form'>
-        <Form className='input-search justify-content-center'>
-          <Form.Group controlId='form-search' autoComplete='off'>
-            <InputGroup>
-              <InputGroup.Prepend>
-                <InputGroup.Text id='form-icon'><BsSearch /></InputGroup.Text>
-              </InputGroup.Prepend>
-              <Form.Control type='text' placeholder='Artist, album, or song' />
-            </InputGroup>
-          </Form.Group>
-        </Form>
+    <div className='search-card'>
+      <div className='container'>
+        <div className='search-form'>
+          <Form className='input-search justify-content-center'>
+            <Form.Group controlId='form-search' autoComplete='off'>
+              <InputGroup>
+                <InputGroup.Prepend>
+                  <InputGroup.Text id='form-icon'><BsSearch /></InputGroup.Text>
+                </InputGroup.Prepend>
+                <Form.Control type='text' placeholder='Artist, album, or song' />
+              </InputGroup>
+            </Form.Group>
+          </Form>
+        </div>
+        <main className='content'>
+          {/* <Image src={imageBG} className='imageBG' fluid /> */}
+        </main>
       </div>
-      {/* <main className='content'>
-      </main> */}
     </div>
   )
 }
