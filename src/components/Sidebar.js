@@ -21,36 +21,20 @@ const Sidebar = () => {
             className='text-decoration-none'
             style={{ color: 'inherit' }}
           >
-            Sidebar
+            Menu
           </a>
         </CDBSidebarHeader>
 
         <CDBSidebarContent className='sidebar-content'>
           <CDBSidebarMenu>
             <NavLink exact to='/' activeClassName='activeClicked'>
-              <CDBSidebarMenuItem icon='columns'>Dashboard</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon='home'>Home</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to='/tables' activeClassName='activeClicked'>
-              <CDBSidebarMenuItem icon='table'>Tables</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon='search'>Search</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to='/profile' activeClassName='activeClicked'>
-              <CDBSidebarMenuItem icon='user'>Profile page</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink exact to='/analytics' activeClassName='activeClicked'>
-              <CDBSidebarMenuItem icon='chart-line'>
-                Analytics
-              </CDBSidebarMenuItem>
-            </NavLink>
-
-            <NavLink
-              exact
-              to='/hero404'
-              target='_blank'
-              activeClassName='activeClicked'
-            >
-              <CDBSidebarMenuItem icon='exclamation-circle'>
-                404 page
-              </CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon='random'>Random</CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>
