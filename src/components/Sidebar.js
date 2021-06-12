@@ -8,6 +8,7 @@ import {
   CDBSidebarMenuItem
 } from 'cdbreact'
 import { NavLink } from 'react-router-dom'
+import { FaSpotify } from 'react-icons/fa'
 
 const Sidebar = () => {
   return (
@@ -38,14 +39,13 @@ const Sidebar = () => {
             </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>
-
         <CDBSidebarFooter style={{ textAlign: 'center' }}>
           <div
             style={{
               padding: '20px 5px'
             }}
           >
-            Sidebar Footer
+            <FaSpotify size={64} />
           </div>
         </CDBSidebarFooter>
       </CDBSidebar>
