@@ -9,6 +9,7 @@ import {
 } from 'cdbreact'
 import { NavLink } from 'react-router-dom'
 import { FaSpotify } from 'react-icons/fa'
+import './Sidebar.css'
 
 const Sidebar = () => {
   return (
@@ -45,7 +46,8 @@ const Sidebar = () => {
               padding: '20px 5px'
             }}
           >
-            <FaSpotify size={64} />
+          {/* icon size 20 for media query */}
+            <FaSpotify className='spotify-logo' />
           </div>
         </CDBSidebarFooter>
       </CDBSidebar>
