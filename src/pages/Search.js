@@ -6,7 +6,7 @@ import imageBG from '../images/music-chord-bg.jpg'
 
 const Search = () => {
   return (
-    <div className='container'>
+    <div className='search-container'>
       <div className='search-form'>
         <Form className='input-search justify-content-center'>
           <Form.Group controlId='form-search' autoComplete='off'>
