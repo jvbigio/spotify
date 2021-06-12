@@ -46,7 +46,6 @@ const Sidebar = () => {
               padding: '20px 5px'
             }}
           >
-          {/* icon size 20 for media query */}
             <FaSpotify className='spotify-logo' />
           </div>
         </CDBSidebarFooter>

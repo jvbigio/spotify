@@ -11,6 +11,11 @@ function App () {
     <Router>
       <div className='App'>
         <Sidebar />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/search' component={Search} />
+          <Route path='/random' component={Random} />
+        </Switch>
       </div>
     </Router>
   )
