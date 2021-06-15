@@ -10,14 +10,16 @@ function App () {
   return (
     <Router>
       <div className='App'>
-        <Sidebar />
-        <main className='content'>
-          <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path='/search' component={Search} />
-            <Route path='/random' component={Random} />
-          </Switch>
-        </main>
+        <div className='wrapper'>
+          <Sidebar />
+          <main className='content'>
+            <Switch>
+              <Route path='/' exact component={Home} />
+              <Route path='/search' component={Search} />
+              <Route path='/random' component={Random} />
+            </Switch>
+          </main>
+        </div>
       </div>
     </Router>
   )
