@@ -8,7 +8,7 @@ const Search = () => {
   return (
     <div className='search-container'>
       <div className='search-form'>
-        <Form className='input-search justify-content-center'>
+        <Form className='input-search justify-content-center w-50'>
           <Form.Group controlId='form-search' autoComplete='off'>
             <InputGroup>
               <InputGroup.Prepend>
