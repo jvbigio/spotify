@@ -3,6 +3,8 @@ import './Search.css'
 import { Form, InputGroup, Image } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
 import imageBG from '../images/music-chord-bg.jpg'
+// test:
+// const tokenService = require('./')
 
 const Search = () => {
   return (
