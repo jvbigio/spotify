@@ -3,8 +3,14 @@ import './Search.css'
 import { Form, InputGroup, Image } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
 import imageBG from '../images/music-chord-bg.jpg'
+// import { getAuthToken } from '../../controllers/token-service'
+import authToken from '../controllers/token-service'
 // test:
-// const tokenService = require('./')
+require('dotenv').config()
+// const tokenService = require('../../controllers/token-service')
+// getAuthToken()
+
+authToken.getAuthToken()
 
 const Search = () => {
   return (
