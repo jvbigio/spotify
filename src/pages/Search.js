@@ -7,10 +7,8 @@ import imageBG from '../images/music-chord-bg.jpg'
 import authToken from '../controllers/token-service'
 // test:
 require('dotenv').config()
-// const tokenService = require('../../controllers/token-service')
-// getAuthToken()
 
-authToken.getAuthToken()
+// authToken.getAuthToken() // works
 
 const Search = () => {
   return (

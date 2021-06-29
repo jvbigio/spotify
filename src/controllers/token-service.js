@@ -1,9 +1,10 @@
 const axios = require('axios').default
-require('dotenv').config()
+// require('dotenv').config()
+// const dotenv = require('dotenv')
 
 const getAuthToken = () => {
   // console.log('testing!!') // works
-  console.log(process.env.API_KEY)
+  // console.log(process.env.API_KEY)
 }
 
 module.exports = {
