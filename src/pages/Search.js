@@ -3,10 +3,8 @@ import './Search.css'
 import { Form, InputGroup, Image } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
 import imageBG from '../images/music-chord-bg.jpg'
-// import { getAuthToken } from '../../controllers/token-service'
+
 import authToken from '../controllers/token-service'
-// test:
-require('dotenv').config()
 
 authToken.getAuthToken()
 

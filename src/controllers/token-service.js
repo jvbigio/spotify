@@ -1,5 +1,5 @@
 const axios = require('axios').default
-// this does not work for frontend: ?????
+// dotenv does not work for frontend: ?????
 // require('dotenv').config()
 
 let bearer
@@ -25,7 +25,7 @@ const getAuthToken = () => {
         axios.defaults.headers.common = {
           Authorization: `Bearer ${response.data.access_token}`
         }
-        // console.log(response.data.access_token) // works
+        console.log(response.data.access_token) // works
         return response.data.access_token
       })
   } catch (err) {
