@@ -8,7 +8,7 @@ import authToken from '../controllers/token-service'
 // test:
 require('dotenv').config()
 
-authToken.getAuthToken() // works
+authToken.getAuthToken()
 
 const Search = () => {
   return (

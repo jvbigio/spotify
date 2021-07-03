@@ -1,11 +1,10 @@
 const axios = require('axios').default
-require('dotenv').config()
+// this does not work for frontend: ????
+// require('dotenv').config()
 
 let bearer
 
 const getAuthToken = () => {
-  // console.log('testing!!') // works
-  // console.log(process.env.API_KEY)
   try {
     if (bearer) return bearer
     const URL = 'https://accounts.spotify.com/api/token'
@@ -15,8 +14,8 @@ const getAuthToken = () => {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       auth: {
-        username: process.env.API_KEY,
-        password: process.env.API_SECRET_KEY
+        username: process.env.REACT_APP_API_KEY,
+        password: process.env.REACT_APP_API_SECRET_KEY
       }
     }
 
@@ -26,7 +25,7 @@ const getAuthToken = () => {
         axios.defaults.headers.common = {
           Authorization: `Bearer ${response.data.access_token}`
         }
-        // console.log(response.data.access_token)h
+        // console.log(response.data.access_token) // works
         return response.data.access_token
       })
   } catch (err) {
