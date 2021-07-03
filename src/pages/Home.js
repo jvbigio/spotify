@@ -1,5 +1,9 @@
 import React from 'react'
 import './Home.css'
+import Image from 'react-bootstrap/Image'
+// import vinylRecord from '../images/vinyl-record.jpg'
+// import musicNotes from '../images/music-notes.png'
+// import musical from '../images/music-chord-bg.jpg'
 
 const Home = () => {
   return (
@@ -9,6 +13,7 @@ const Home = () => {
       <main>
         <p>This app allows a user to search for an artist, album or song. Users can save 5 of their favorite music artists and generate a random song from these musicians.</p>
       </main>
+      {/* <Image src={musical} className='homeImg' fluid /> */}
     </div>
   )
 }

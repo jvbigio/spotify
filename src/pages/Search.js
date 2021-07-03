@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Search.css'
 import { Form, InputGroup, Image } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
-import imageBG from '../images/music-chord-bg.jpg'
+import musicNotes from '../images/music-notes.png'
 
 import authToken from '../controllers/token-service'
 import axios from 'axios'
@@ -18,7 +18,7 @@ const Search = () => {
   const handleSearch = async (e) => {
     e.preventDefault()
 
-    // TODO: 
+    // TODO:
     // create option to search by artist, album, or song
     // const artistUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=artist`
     // const albumUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=album`
@@ -52,6 +52,7 @@ const Search = () => {
           </Form.Group>
         </Form>
       </div>
+      <Image src={musicNotes} className='musicImage' fluid />
       {/* <main className='content'>
       </main> */}
     </div>
