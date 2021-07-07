@@ -25,7 +25,7 @@ const Search = () => {
     // const songUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=playlist`
 
     try {
-      const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=artist`)
+      const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`)
       console.log(response.data)
     } catch (err) {
       console.log(err)
