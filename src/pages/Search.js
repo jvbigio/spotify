@@ -12,8 +12,11 @@ authToken.getAuthToken()
 const Search = () => {
   const [searchInput, setSearchInput] = useState('')
   const [searchResults, setSearchResults] = useState([])
+  const [dropDownValue, setDropdownValue] = useState('')
 
   const getUserInput = e => setSearchInput(e.target.value)
+
+  const handleClick = e => setDropdownValue(e.target.textContent)
 
   const handleSearch = async (e) => {
     e.preventDefault()
@@ -53,12 +56,14 @@ const Search = () => {
                 // variant='outline-secondary'
                 // variant='primary'
                 variant='info'
-                title='Options'
+                // title='Options'
+                title={dropDownValue}
+                // value={dropDownValue}
                 id='input-group-dropdown'
               >
-                <Dropdown.Item href='#'>Artist</Dropdown.Item>
-                <Dropdown.Item href='#'>Album</Dropdown.Item>
-                <Dropdown.Item href='#'>Song</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>Artist</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>Album</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>Song</Dropdown.Item>
               </DropdownButton>
             </InputGroup>
           </Form.Group>
