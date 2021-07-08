@@ -53,12 +53,8 @@ const Search = () => {
               />
               <DropdownButton
                 as={InputGroup.Append}
-                // variant='outline-secondary'
-                // variant='primary'
                 variant='info'
-                // title='Options'
                 title={dropDownValue}
-                // value={dropDownValue}
                 id='input-group-dropdown'
               >
                 <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>Artist</Dropdown.Item>
