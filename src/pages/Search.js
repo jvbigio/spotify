@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Search.css'
-import { Form, InputGroup, Image } from 'react-bootstrap'
+import { Form, InputGroup, DropdownButton, Dropdown, Image } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
 import musicNotes from '../images/music-notes.png'
 
@@ -48,6 +48,18 @@ const Search = () => {
                 value={searchInput}
                 onChange={(e) => getUserInput(e)}
               />
+              <DropdownButton
+                as={InputGroup.Append}
+                // variant='outline-secondary'
+                // variant='primary'
+                variant='info'
+                title='Options'
+                id='input-group-dropdown'
+              >
+                <Dropdown.Item href='#'>Artist</Dropdown.Item>
+                <Dropdown.Item href='#'>Album</Dropdown.Item>
+                <Dropdown.Item href='#'>Song</Dropdown.Item>
+              </DropdownButton>
             </InputGroup>
           </Form.Group>
         </Form>
