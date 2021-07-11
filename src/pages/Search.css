@@ -14,10 +14,9 @@
 }
 /* shorthand property:  border-top-left-radius, border-top-right-radius, border-bottom-right-radius and border-bottom-left-radius properties. */
 
-#form-search {
-  /* border-radius: 0 25px 25px 0; */
-  /* border-radius: 0; */
-}
+/* #form-search {
+  border-radius: 0 25px 25px 0;
+} */
 
 #form-icon,
 #form-search {

@@ -23,9 +23,9 @@ const Search = () => {
 
     // TODO:
     // create option to search by artist, album, or song
-    // const artistUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=artist`
-    // const albumUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=album`
-    // const songUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=playlist`
+    const artistUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`
+    const albumUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=album&limit=10`
+    const songUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=track&limit=10`
 
     try {
       const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`)
@@ -53,10 +53,7 @@ const Search = () => {
               />
               <DropdownButton
                 as={InputGroup.Append}
-                // variant='outline-secondary'
-                // variant='primary'
                 variant='info'
-                // title='Options'
                 title={dropDownValue}
                 // value={dropDownValue}
                 id='input-group-dropdown'
