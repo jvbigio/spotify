@@ -31,6 +31,7 @@ const Search = () => {
     // setDropdownValue(dropDownValue.toLowerCase())
     // console.log(dropDownValue)
 
+    // ORIGINAL
     // do I really need try/catch statement?
     // try {
     //   const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`)
@@ -40,17 +41,25 @@ const Search = () => {
     // }
     // setSearchInput('')
 
-    // Try this instead of try/catch:
-    if (dropDownValue === 'Artist') {
-      axios.get(artistUrl)
-    } else if (dropDownValue === 'Album') {
-      axios.get(albumUrl)
-    } else if (dropDownValue === 'Song') {
-      axios.get(songUrl)
-    }
-    axios.then(response => setSearchResults(response.data))
-      .catch(err => console.log(err))
+    // OPTION 2
+    axios
+      .get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=10`)
+      .then(response => setSearchResults(response.data))
+      .catch(err => console.error(err))
     setSearchInput('')
+
+    // OPTION 3
+    // Try this instead of try/catch:
+    // if (dropDownValue === 'Artist') {
+    //   axios.get(artistUrl)
+    // } else if (dropDownValue === 'Album') {
+    //   axios.get(albumUrl)
+    // } else if (dropDownValue === 'Song') {
+    //   axios.get(songUrl)
+    // }
+    // axios.then(response => setSearchResults(response.data))
+    //   .catch(err => console.log(err))
+    // setSearchInput('')
   }
 
   return (
@@ -75,9 +84,9 @@ const Search = () => {
                 // value={dropDownValue}
                 id='input-group-dropdown'
               >
-                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>Artist</Dropdown.Item>
-                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>Album</Dropdown.Item>
-                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>Song</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>artist</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>album</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>song</Dropdown.Item>
               </DropdownButton>
             </InputGroup>
           </Form.Group>
