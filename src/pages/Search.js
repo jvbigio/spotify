@@ -22,7 +22,7 @@ const Search = () => {
     e.preventDefault()
 
     // TODO:
-    // create option to search by artist, album, or song
+    // create option to search by artist, album, or song::
     const artistUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`
     const albumUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=album&limit=10`
     const songUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=track&limit=10`
