@@ -31,12 +31,25 @@ const Search = () => {
     // setDropdownValue(dropDownValue.toLowerCase())
     // console.log(dropDownValue)
 
-    try {
-      const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`)
-      console.log(response.data)
-    } catch (err) {
-      console.log(err)
+    // do I really need try/catch statement?
+    // try {
+    //   const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`)
+    //   console.log(response.data)
+    // } catch (err) {
+    //   console.log(err)
+    // }
+    // setSearchInput('')
+
+    // Try this instead of try/catch:
+    if (dropDownValue === 'Artist') {
+      axios.get(artistUrl)
+    } else if (dropDownValue === 'Album') {
+      axios.get(albumUrl)
+    } else if (dropDownValue === 'Song') {
+      axios.get(songUrl)
     }
+    axios.then(response => setSearchResults(response.data))
+      .catch(err => console.log(err))
     setSearchInput('')
   }
 
