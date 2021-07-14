@@ -5,11 +5,7 @@ import {
   InputGroup,
   DropdownButton,
   Dropdown,
-  Image,
-  Container,
-  Card,
-  Row,
-  Col
+  Image
 } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
 import musicNotes from '../images/music-notes.png'
