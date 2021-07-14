@@ -1,6 +1,16 @@
 import React, { useState } from 'react'
 import './Search.css'
-import { Form, InputGroup, DropdownButton, Dropdown, Image } from 'react-bootstrap'
+import {
+  Form,
+  InputGroup,
+  DropdownButton,
+  Dropdown,
+  Image,
+  Container,
+  Card,
+  Row,
+  Col
+} from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
 import musicNotes from '../images/music-notes.png'
 
