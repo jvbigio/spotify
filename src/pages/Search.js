@@ -87,7 +87,7 @@ const Search = () => {
               >
                 <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>artist</Dropdown.Item>
                 <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>album</Dropdown.Item>
-                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>song</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>track</Dropdown.Item>
               </DropdownButton>
             </InputGroup>
           </Form.Group>
