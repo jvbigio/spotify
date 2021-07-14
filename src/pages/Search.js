@@ -34,7 +34,7 @@ const Search = () => {
     // ORIGINAL
     // do I really need try/catch statement?
     try {
-      const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=10`)
+      const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
       console.log(response.data)
     } catch (err) {
       console.log(err)
