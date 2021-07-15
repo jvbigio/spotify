@@ -73,7 +73,7 @@ const Search = () => {
           </Form.Group>
         </Form>
       </div>
-      <Image src={musicNotes} className='musicImage' fluid />
+      {/* <Image src={musicNotes} className='musicImage' fluid /> */}
       <main className='content'>
         <ArtistCards />
       </main>
