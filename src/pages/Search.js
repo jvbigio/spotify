@@ -14,11 +14,23 @@ import authToken from '../controllers/token-service'
 import axios from 'axios'
 import ArtistCards from '../components/ArtistCards'
 
+// for dummy data:
+import metal from '../images/music-headphones.jpg'
+
 authToken.getAuthToken()
 
 const Search = () => {
   const [searchInput, setSearchInput] = useState('')
-  const [searchResults, setSearchResults] = useState([])
+  // const [searchResults, setSearchResults] = useState([])
+
+  // Dummy data
+  const [searchResults, setSearchResults] = useState([
+    { name: 'Metallica', artistPic: metal },
+    { name: 'Metallica', artistPic: metal },
+    { name: 'Metallica', artistPic: metal },
+    { name: 'Metallica', artistPic: metal },
+    { name: 'Metallica', artistPic: metal }
+  ])
   const [dropDownValue, setDropdownValue] = useState('')
 
   const getUserInput = e => setSearchInput(e.target.value)
@@ -42,6 +54,16 @@ const Search = () => {
     }
     setSearchInput('')
   }
+
+  const renderResponseData = searchResults.map(data => {
+    return (
+      <ArtistCards
+        key={data.name}
+        name={data.name}
+        artistPic={data.artistPic}
+      />
+    )
+  })
 
   return (
     <div className='search-container'>
@@ -74,13 +96,11 @@ const Search = () => {
         </Form>
       </div>
       {/* <Image src={musicNotes} className='musicImage' fluid /> */}
-      <main className='content'>
-        <ArtistCards />
-        <ArtistCards />
-        <ArtistCards />
-        <ArtistCards />
-        <ArtistCards />
-      </main>
+      <div className='content-wrapper'>
+        <div className='content'>
+          {renderResponseData}
+        </div>
+      </div>
     </div>
   )
 }
