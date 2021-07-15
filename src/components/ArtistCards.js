@@ -11,6 +11,12 @@ const ArtistCards = ({ name, imgSrc, handleClick }) => {
       <Card className='artist-card' onClick={(e) => handleClick(e)}>
         <img className='artist-img rounded-circle' src={artistPic} alt='artist' height='150px' width='150px' />
         {/* <Image src={artistPic} className='artistImg rounded-circle' fluid /> */}
+        <Card.Body>
+          <Card.Text>
+            {/* {name} */}
+            Metallica
+          </Card.Text>
+        </Card.Body>
       </Card>
     </div>
   )

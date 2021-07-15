@@ -76,6 +76,10 @@ const Search = () => {
       {/* <Image src={musicNotes} className='musicImage' fluid /> */}
       <main className='content'>
         <ArtistCards />
+        <ArtistCards />
+        <ArtistCards />
+        <ArtistCards />
+        <ArtistCards />
       </main>
     </div>
   )

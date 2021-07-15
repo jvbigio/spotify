@@ -28,7 +28,8 @@
   width: 200px;
   height: 200px;
   cursor: pointer;
-  background: #b3b3b3;
+  color: whitesmoke;
+  background: #333;
   margin-bottom: 16px;
   /* margin-bottom: 500px; */
   min-height: 300px;
