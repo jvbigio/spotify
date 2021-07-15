@@ -12,6 +12,7 @@ import musicNotes from '../images/music-notes.png'
 
 import authToken from '../controllers/token-service'
 import axios from 'axios'
+import ArtistCards from '../components/ArtistCards'
 
 authToken.getAuthToken()
 
@@ -29,16 +30,10 @@ const Search = () => {
 
     // TODO:
     // create option to search by artist, album, or song:
-    const artistUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`
-    const albumUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=album&limit=10`
-    const songUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=track&limit=10`
+    // const artistUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`
+    // const albumUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=album&limit=10`
+    // const songUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=track&limit=10`
 
-    // console.log(dropDownValue)
-    // setDropdownValue(dropDownValue.toLowerCase())
-    // console.log(dropDownValue)
-
-    // ORIGINAL
-    // do I really need try/catch statement?
     try {
       const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
       console.log(response.data)
@@ -46,27 +41,6 @@ const Search = () => {
       console.log(err)
     }
     setSearchInput('')
-
-    // OPTION 2
-    // axios
-    //   .get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=10`)
-    //   .then(response => setSearchResults(response.data))
-    //   .catch(err => console.error(err))
-    // setSearchInput('')
-
-    // console.log(searchResults)
-    // OPTION 3
-    // Try this instead of try/catch:
-    // if (dropDownValue === 'Artist') {
-    //   axios.get(artistUrl)
-    // } else if (dropDownValue === 'Album') {
-    //   axios.get(albumUrl)
-    // } else if (dropDownValue === 'Song') {
-    //   axios.get(songUrl)
-    // }
-    // axios.then(response => setSearchResults(response.data))
-    //   .catch(err => console.log(err))
-    // setSearchInput('')
   }
 
   return (
@@ -100,8 +74,9 @@ const Search = () => {
         </Form>
       </div>
       <Image src={musicNotes} className='musicImage' fluid />
-      {/* <main className='content'>
-      </main> */}
+      <main className='content'>
+        <ArtistCards />
+      </main>
     </div>
   )
 }

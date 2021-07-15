@@ -1,0 +1,30 @@
+.container-fluid {
+   display: flex;
+   align-items: center;
+   margin-top: 20px;
+   margin-left: 10px;
+   margin-right: 10px;
+   justify-content: space-between;
+   flex-direction: row;
+   flex-wrap: wrap;
+   /* flex-direction: column;
+   margin-bottom: 16px;
+   min-height: 300px;
+   min-width: 100%;
+   position: relative; */
+}
+
+.artist-card {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  flex-direction: column;
+  margin-bottom: 16px;
+  min-height: 300px;
+  min-width: 100%;
+  position: relative;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
+}
