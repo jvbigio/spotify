@@ -1,13 +1,15 @@
-/* .container.fluid {
-   display: flex;
-   align-items: center;
-   margin-top: 20px;
+.container.fluid {
+   /* display: flex; */
+   /* align-items: center; */
+   /* margin-top: 20px;
    margin-left: 10px;
    margin-right: 10px;
    justify-content: space-between;
-   flex-direction: row;
-   flex-wrap: wrap;
-} */
+   flex-direction: row; */
+   /* flex-wrap: wrap;
+   height: 100%;
+   width: 100%; */
+}
 
 .artist-card.card {
   display: flex;
