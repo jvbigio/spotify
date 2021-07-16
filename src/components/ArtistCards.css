@@ -1,15 +1,23 @@
-.container.fluid {
-   /* display: flex; */
-   /* align-items: center; */
-   /* margin-top: 20px;
-   margin-left: 10px;
-   margin-right: 10px;
-   justify-content: space-between;
-   flex-direction: row; */
-   /* flex-wrap: wrap;
-   height: 100%;
-   width: 100%; */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 186px);
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 0.5rem;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
+
+/* .cards>* {
+  height: 200px;
+} */
+
+/* .artist-card {
+  border: 2px solid #e7e7e7;
+  border-radius: 4px;
+  padding: .5rem;
+} */
 
 .artist-card.card {
   display: flex;
@@ -19,13 +27,17 @@
   cursor: pointer;
   color: whitesmoke;
   background: #333;
-  margin-bottom: 16px;
-  min-height: 250px;
+  /* margin-bottom: 16px; */
+  /* min-height: 250px; */
   cursor: pointer;
+  /* border: 2px solid #e7e7e7; */
+  border-radius: 4px;
+  padding: .5rem;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
 }
 
-
 .artist-img {
   margin-top: 15px;
+  height: 150px;
+  width: 150px;
 }
