@@ -1,7 +1,7 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 186px);
   grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
   grid-gap: 0.5rem;
   margin-top: 20px;
@@ -9,9 +9,9 @@
   flex-wrap: wrap;
 }
 
-/* .cards>* {
+.cards>* {
   height: 200px;
-} */
+}
 
 /* .artist-card {
   border: 2px solid #e7e7e7;
@@ -28,7 +28,8 @@
   color: whitesmoke;
   background: #333;
   /* margin-bottom: 16px; */
-  /* min-height: 250px; */
+  /* min-height: 250px;
+  min-height: 200px; */
   cursor: pointer;
   /* border: 2px solid #e7e7e7; */
   border-radius: 4px;
