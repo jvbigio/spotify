@@ -99,7 +99,7 @@ const Search = () => {
       {/* <Image src={musicBG} className='musicImage' fluid /> */}
       {/* <Image src={musicNotes} className='musicImage' fluid /> */}
       <div className='content-wrapper'>
-        <div className='content'>
+        <div className='cards'>
           {renderResponseData}
         </div>
       </div>
