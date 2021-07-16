@@ -44,9 +44,10 @@ const Search = () => {
     try {
       await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
         .then(response => {
-          console.log(response.data.artists.items[0].name)
+          // console.log(response.data.artists.items[0].name)
+          console.log(response.data.artists)
           // throws typeError
-          setSearchResults(response.data)
+          // setSearchResults(response.data)
         })
     } catch (err) {
       console.log(err)
