@@ -44,7 +44,7 @@ const Search = () => {
     try {
       await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
         .then(response => {
-          console.log(response.data.artists.items[0].name)
+          // console.log(response.data.artists.items[0].name)
           // throws typeError
           // setSearchResults(response.data)
         })
@@ -61,9 +61,9 @@ const Search = () => {
   const renderResponseData = searchResults.map(artist => {
     return (
       <ArtistCards
-        key={artist.name}
-        artist={artist.name}
-        artistPic={artist.artistPic}
+        key={artist.artists.items.id}
+        artist={artist.artists.items.name}
+        artistPic={artist.artists.items.images}
         handleClick={() => handleClick(artist.name)}
       />
     )
