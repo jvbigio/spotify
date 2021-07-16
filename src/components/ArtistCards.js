@@ -9,7 +9,7 @@ const ArtistCards = ({ artist, artistPic, handleClick }) => {
   return (
     <div className='cards'>
       <Card className='artist-card' onClick={(e) => handleClick(e)}>
-        {/* <img className='artist-img rounded-circle' src={artistPic} alt='artist' height='150px' width='150px' /> */}
+        <img className='artist-img rounded-circle' src={artistPic} alt='artist' height='150px' width='150px' />
         <Card.Body>
           <Card.Text>
             {artist.name}
