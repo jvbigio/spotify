@@ -1,5 +1,13 @@
-/* .search-container {
-  width: 80%;
+.search-form {
+  display: flex;
+  flex-direction: row;
+  width: 700px;
+}
+
+/* .search-container.search-form {
+  display: flex;
+  flex-grow: 2;
+  width: 100%;
 } */
 
 #form-icon {
@@ -39,7 +47,7 @@ button:focus, input {
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 20px;
-  /* width: 100%;
-  height: 100%; */
+  width: 100%;
+  height: 100%;
 }
 

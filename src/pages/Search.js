@@ -16,22 +16,22 @@ import axios from 'axios'
 import ArtistCards from '../components/ArtistCards'
 
 // for dummy data:
-import metal from '../images/music-headphones.jpg'
+// import metal from '../images/music-headphones.jpg'
 
 authToken.getAuthToken()
 
 const Search = () => {
   const [searchInput, setSearchInput] = useState('')
-  // const [searchResults, setSearchResults] = useState([])
+  const [searchResults, setSearchResults] = useState([])
 
   // Dummy data
-  const [searchResults, setSearchResults] = useState([
-    { name: 'Metallica', artistPic: metal },
-    { name: 'Metallica', artistPic: metal },
-    { name: 'Metallica', artistPic: metal },
-    { name: 'Metallica', artistPic: metal },
-    { name: 'Metallica', artistPic: metal }
-  ])
+  // const [searchResults, setSearchResults] = useState([
+  //   { name: 'Metallica', artistPic: metal },
+  //   { name: 'Metallica', artistPic: metal },
+  //   { name: 'Metallica', artistPic: metal },
+  //   { name: 'Metallica', artistPic: metal },
+  //   { name: 'Metallica', artistPic: metal }
+  // ])
   const [dropDownValue, setDropdownValue] = useState('')
 
   const getUserInput = e => setSearchInput(e.target.value)
@@ -48,8 +48,15 @@ const Search = () => {
     // const songUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=track&limit=10`
 
     try {
-      const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
-      console.log(response.data)
+      // const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
+      //   .then(response => response.data)
+      // works:
+      // console.log(response.data.artists.items[0].name)
+
+      await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
+        .then(response => {
+          console.log(response.data.artists)
+        })
     } catch (err) {
       console.log(err)
     }
@@ -60,14 +67,13 @@ const Search = () => {
     console.log(`Card clicked: ${name}`)
   }
 
-  const renderResponseData = searchResults.map(data => {
+  const renderResponseData = searchResults.map(artist => {
     return (
       <ArtistCards
-        key={data.name}
-        name={data.name}
-        artistPic={data.artistPic}
-        // handleClick={(e) => handleClick(e)}
-        handleClick={() => handleClick(data.name)}
+        key={artist.name}
+        artist={artist.name}
+        artistPic={artist.artistPic}
+        handleClick={() => handleClick(artist.name)}
       />
     )
   })
@@ -91,7 +97,6 @@ const Search = () => {
                 as={InputGroup.Append}
                 variant='info'
                 title={dropDownValue}
-                // value={dropDownValue}
                 id='input-group-dropdown'
               >
                 <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>artist</Dropdown.Item>
