@@ -8,7 +8,8 @@ import {
   Image
 } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
-import musicNotes from '../images/music-notes.png'
+import musicNotes from '../images/musicNotes.png'
+import musicBG from '../images/search-bg.png'
 
 import authToken from '../controllers/token-service'
 import axios from 'axios'
@@ -95,6 +96,7 @@ const Search = () => {
           </Form.Group>
         </Form>
       </div>
+      {/* <Image src={musicBG} className='musicImage' fluid /> */}
       {/* <Image src={musicNotes} className='musicImage' fluid /> */}
       <div className='content-wrapper'>
         <div className='content'>
