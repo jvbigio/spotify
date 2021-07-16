@@ -36,7 +36,7 @@ const Search = () => {
 
   const getUserInput = e => setSearchInput(e.target.value)
 
-  const handleClick = e => setDropdownValue(e.target.textContent)
+  const handleDropdownClick = e => setDropdownValue(e.target.textContent)
 
   const handleSearch = async (e) => {
     e.preventDefault()
@@ -56,12 +56,18 @@ const Search = () => {
     setSearchInput('')
   }
 
+  const handleClick = name => {
+    console.log(`Card clicked: ${name}`)
+  }
+
   const renderResponseData = searchResults.map(data => {
     return (
       <ArtistCards
         key={data.name}
         name={data.name}
         artistPic={data.artistPic}
+        // handleClick={(e) => handleClick(e)}
+        handleClick={() => handleClick(data.name)}
       />
     )
   })
@@ -88,16 +94,14 @@ const Search = () => {
                 // value={dropDownValue}
                 id='input-group-dropdown'
               >
-                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>artist</Dropdown.Item>
-                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>album</Dropdown.Item>
-                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>track</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>artist</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>album</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>track</Dropdown.Item>
               </DropdownButton>
             </InputGroup>
           </Form.Group>
         </Form>
       </div>
-      {/* <Image src={musicBG} className='musicImage' fluid /> */}
-      {/* <Image src={musicNotes} className='musicImage' fluid /> */}
       <div className='content-wrapper'>
         <div className='cards'>
           {renderResponseData}

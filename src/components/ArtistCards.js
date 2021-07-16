@@ -8,8 +8,7 @@ import { Card, Container, Row, Col, Image } from 'react-bootstrap'
 const ArtistCards = ({ name, artistPic, handleClick }) => {
   return (
     <div className='cards'>
-      {/* <Card className='artist-card' onClick={(e) => handleClick(e)}> */}
-      <Card className='artist-card'>
+      <Card className='artist-card' onClick={(e) => handleClick(e)}>
         <img className='artist-img rounded-circle' src={artistPic} alt='artist' height='150px' width='150px' />
         <Card.Body>
           <Card.Text>
