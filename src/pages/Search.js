@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Search.css'
 import {
   Form,
@@ -41,21 +41,12 @@ const Search = () => {
   const handleSearch = async (e) => {
     e.preventDefault()
 
-    // TODO:
-    // create option to search by artist, album, or song:
-    // const artistUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`
-    // const albumUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=album&limit=10`
-    // const songUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=track&limit=10`
-
     try {
-      // const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
-      //   .then(response => response.data)
-      // works:
-      // console.log(response.data.artists.items[0].name)
-
       await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
         .then(response => {
-          console.log(response.data.artists)
+          console.log(response.data.artists.items[0].name)
+          // throws typeError
+          // setSearchResults(response.data)
         })
     } catch (err) {
       console.log(err)
