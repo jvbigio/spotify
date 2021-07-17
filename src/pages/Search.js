@@ -45,9 +45,10 @@ const Search = () => {
       await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
         .then(response => {
           // console.log(response.data.artists.items[0].name)
-          console.log(response.data.artists)
+          // console.log(response.data.artists)
+          console.log(response.data.artists.items)
           // throws typeError
-          // setSearchResults(response.data)
+          setSearchResults(response.data.artists.items)
         })
     } catch (err) {
       console.log(err)
@@ -59,16 +60,13 @@ const Search = () => {
     console.log(`Card clicked: ${name}`)
   }
 
-  const renderResponseData = searchResults.map(artist => {
-    return (
-      <ArtistCards
-        key={artist.artists.items.id}
-        artist={artist.artists.items.name}
-        artistPic={artist.artists.items.images}
-        handleClick={() => handleClick(artist.name)}
-      />
-    )
-  })
+  const renderResponseData = searchResults.map(result => (
+    <ArtistCards
+      key={result.name}
+      artist={result}
+      handleClick={() => handleClick(result.name)}
+    />
+  ))
 
   return (
     <div className='search-container'>
