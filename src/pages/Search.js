@@ -46,7 +46,7 @@ const Search = () => {
         .then(response => {
           // console.log(response.data.artists.items[0].name)
           // console.log(response.data.artists)
-          console.log(response.data.artists.items)
+          console.log(response.data.artists.items[0].images[2].url) // shows link for img
           // throws typeError
           setSearchResults(response.data.artists.items)
         })
@@ -62,8 +62,9 @@ const Search = () => {
 
   const renderResponseData = searchResults.map(result => (
     <ArtistCards
-      key={result.name}
+      key={result.id}
       artist={result}
+      artistPic={result}
       handleClick={() => handleClick(result.name)}
     />
   ))
