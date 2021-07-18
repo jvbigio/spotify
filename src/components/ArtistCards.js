@@ -3,35 +3,19 @@ import './ArtistCards.css'
 
 import { Card, Container, Row, Col, Image } from 'react-bootstrap'
 
-import { CgProfile } from 'react-icons/cg'
-
-// import artistPic from '../images/music-headphones.jpg'
+import music from '../images/flat-music.png'
 
 const ArtistCards = ({ artist, artistPic, handleClick }) => {
-  // shows link for img:
-  // console.log(response.data.artists.items[0].images[2].url)
-
-  // console.log(artist.images[2].url)
-
+  console.log(artist.external_urls)
   const artistMedia = artist.images[0] // shows array of images
-  // console.log(artistMedia)
-  const hasMedia = () => artistMedia ? artistMedia.url : <CgProfile />
-  // console.log(artist.images.length)
-  // console.log(artistMedia)
-  // const artistImage = []
-  // artistImage.push(artist.items.images[2])
-  // console.log(artistImage)
-  const imgStyle = {
-    width: '150px',
-    height: '150px'
-  }
+  const hasMedia = () => artistMedia ? artistMedia.url : music
 
   return (
     <div className='cards'>
       <Card className='artist-card' onClick={(e) => handleClick(e)}>
-        <a href={(artistMedia) || <CgProfile />} target='_blank' rel='noreferrer'>
-          {/* <img className='artist-img rounded-circle' src={hasMedia()} alt='artist' height='150px' width='150px' /> */}
-          <Image className='artist-img rounded-circle w-75 h-75' src={(hasMedia()) || null} fluid />
+        {/* <a href={artistMedia} target='_blank' rel='noreferrer'> */}
+        <a href={(artistMedia) ? artist.external_urls : null} target='_blank' rel='noreferrer'>
+          <Image className='artist-img rounded-circle w-75 h-75' src={hasMedia()} fluid />
         </a>
         <Card.Body>
           <Card.Text>
