@@ -44,9 +44,7 @@ const Search = () => {
     try {
       await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
         .then(response => {
-          // console.log(response.data.artists.items[0].name)
-          // console.log(response.data.artists)
-          console.log(response.data.artists.items[0].images[2].url) // shows link for img
+          // console.log(response.data.artists.items[0].images[2].url) // shows link for img
           // throws typeError
           setSearchResults(response.data.artists.items)
         })
