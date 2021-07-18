@@ -15,23 +15,11 @@ import authToken from '../controllers/token-service'
 import axios from 'axios'
 import ArtistCards from '../components/ArtistCards'
 
-// for dummy data:
-// import metal from '../images/music-headphones.jpg'
-
 authToken.getAuthToken()
 
 const Search = () => {
   const [searchInput, setSearchInput] = useState('')
   const [searchResults, setSearchResults] = useState([])
-
-  // Dummy data
-  // const [searchResults, setSearchResults] = useState([
-  //   { name: 'Metallica', artistPic: metal },
-  //   { name: 'Metallica', artistPic: metal },
-  //   { name: 'Metallica', artistPic: metal },
-  //   { name: 'Metallica', artistPic: metal },
-  //   { name: 'Metallica', artistPic: metal }
-  // ])
   const [dropDownValue, setDropdownValue] = useState('')
 
   const getUserInput = e => setSearchInput(e.target.value)
@@ -44,8 +32,6 @@ const Search = () => {
     try {
       await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
         .then(response => {
-          // console.log(response.data.artists.items[0].images[2].url) // shows link for img
-          // throws typeError
           setSearchResults(response.data.artists.items)
         })
     } catch (err) {
