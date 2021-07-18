@@ -1,40 +1,71 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Search.css'
-import { Form, InputGroup, DropdownButton, Dropdown, Image } from 'react-bootstrap'
+import {
+  Form,
+  InputGroup,
+  DropdownButton,
+  Dropdown,
+  Image
+} from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
-import musicNotes from '../images/music-notes.png'
+import musicNotes from '../images/musicNotes.png'
+import musicBG from '../images/search-bg.png'
 
 import authToken from '../controllers/token-service'
 import axios from 'axios'
+import ArtistCards from '../components/ArtistCards'
+
+// for dummy data:
+// import metal from '../images/music-headphones.jpg'
 
 authToken.getAuthToken()
 
 const Search = () => {
   const [searchInput, setSearchInput] = useState('')
   const [searchResults, setSearchResults] = useState([])
+
+  // Dummy data
+  // const [searchResults, setSearchResults] = useState([
+  //   { name: 'Metallica', artistPic: metal },
+  //   { name: 'Metallica', artistPic: metal },
+  //   { name: 'Metallica', artistPic: metal },
+  //   { name: 'Metallica', artistPic: metal },
+  //   { name: 'Metallica', artistPic: metal }
+  // ])
   const [dropDownValue, setDropdownValue] = useState('')
 
   const getUserInput = e => setSearchInput(e.target.value)
 
-  const handleClick = e => setDropdownValue(e.target.textContent)
+  const handleDropdownClick = e => setDropdownValue(e.target.textContent)
 
   const handleSearch = async (e) => {
     e.preventDefault()
 
-    // TODO:
-    // create option to search by artist, album, or song::
-    const artistUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`
-    const albumUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=album&limit=10`
-    const songUrl = `https://api.spotify.com/v1/search?q=${searchInput}&type=track&limit=10`
-
     try {
-      const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=artist&limit=10`)
-      console.log(response.data)
+      await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
+        .then(response => {
+          // console.log(response.data.artists.items[0].images[2].url) // shows link for img
+          // throws typeError
+          setSearchResults(response.data.artists.items)
+        })
     } catch (err) {
       console.log(err)
     }
     setSearchInput('')
   }
+
+  const handleClick = name => {
+    console.log(`Card clicked: ${name}`)
+  }
+
+  const renderResponseData = searchResults.map(result => (
+    <ArtistCards
+      key={result.id}
+      artist={result}
+      artistPic={result}
+      handleClick={() => handleClick(result.name)}
+    />
+  ))
 
   return (
     <div className='search-container'>
@@ -55,20 +86,21 @@ const Search = () => {
                 as={InputGroup.Append}
                 variant='info'
                 title={dropDownValue}
-                // value={dropDownValue}
                 id='input-group-dropdown'
               >
-                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>Artist</Dropdown.Item>
-                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>Album</Dropdown.Item>
-                <Dropdown.Item onClick={(e) => handleClick(e)} href='#'>Song</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>artist</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>album</Dropdown.Item>
+                <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>track</Dropdown.Item>
               </DropdownButton>
             </InputGroup>
           </Form.Group>
         </Form>
       </div>
-      <Image src={musicNotes} className='musicImage' fluid />
-      {/* <main className='content'>
-      </main> */}
+      <div className='content-wrapper'>
+        <div className='cards'>
+          {renderResponseData}
+        </div>
+      </div>
     </div>
   )
 }

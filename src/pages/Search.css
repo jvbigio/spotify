@@ -1,23 +1,20 @@
-.search-container {
-  /* background: url('../images/music-notes.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
-  height: 100vh;
-  width: 100vw;
+.search-form {
+  display: flex;
+  flex-direction: row;
+  width: 700px;
 }
+
+/* .search-container.search-form {
+  display: flex;
+  flex-grow: 2;
+  width: 100%;
+} */
 
 #form-icon {
   border-radius: 25px 0 0 25px;
   margin-left: 16px;
 }
 /* shorthand property:  border-top-left-radius, border-top-right-radius, border-bottom-right-radius and border-bottom-left-radius properties. */
-
-#form-search {
-  /* border-radius: 0 25px 25px 0; */
-  /* border-radius: 0; */
-}
 
 #form-icon,
 #form-search {
@@ -29,17 +26,28 @@
   border-radius: 0 25px 25px 0;
 }
 
-.musicImage {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 30%;
-  opacity: .7;
-  /* width: 100%;
-  height: auto; */
-}
-
 button:focus, input {
   box-shadow: none !important;
   outline: none !important;
 }
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  /* margin-top: 100px; */
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+  /* margin-left: 50px; */
+  /* width: 100%; */
+  /* flex-wrap: wrap; */
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  width: 100%;
+  height: 100%;
+}
+
