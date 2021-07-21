@@ -5,8 +5,9 @@ import { Card, Image } from 'react-bootstrap'
 
 import music from '../images/flat-music.png'
 
-const ArtistCards = ({ artist, artistPic, handleClick }) => {
-  console.log(artist.external_urls)
+const ArtistCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
+  // console.log(artist.external_urls)
+  console.log(dropDownValue)
   const artistMedia = artist.images[0]
   const hasMedia = () => artistMedia ? artistMedia.url : music
 
@@ -19,6 +20,9 @@ const ArtistCards = ({ artist, artistPic, handleClick }) => {
         <Card.Body>
           <Card.Text>
             {artist.name}
+          </Card.Text>
+          <Card.Text className='secondary-text'>
+            {artist.artists[0].name}
           </Card.Text>
         </Card.Body>
       </Card>

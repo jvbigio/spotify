@@ -10,10 +10,9 @@
   flex-wrap: wrap;
 }
 
-.cards>* {
-  /* height: 200px; */
+/* .cards>* {
   height: 265px;
-}
+} */
 
 /* .artist-card {
   border: 2px solid #e7e7e7;
@@ -49,3 +48,7 @@
   padding-bottom: 20px;
   margin-bottom: 20px;
 } */
+
+.secondary-text {
+  font-weight: 200;
+}

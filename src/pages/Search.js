@@ -58,6 +58,7 @@ const Search = () => {
       key={result.id}
       artist={result}
       artistPic={result}
+      dropDownValue={dropDownValue} // test
       handleClick={() => handleClick(result.name)}
     />
   ))
