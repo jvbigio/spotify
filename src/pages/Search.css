@@ -25,12 +25,23 @@
 #input-group-dropdown {
   margin-top: 20px;
   border-radius: 0 25px 25px 0;
+  /* color: whitesmoke;
+  background: black; */
 }
+
+/* #input-group-dropdown:hover {
+  box-shadow: none !important;
+  outline: none !important;
+} */
 
 button:focus, input {
   box-shadow: none !important;
   outline: none !important;
 }
+
+/* button:hover, input:hover {
+  outline: none;
+} */
 
 .content-wrapper {
   display: flex;

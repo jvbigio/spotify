@@ -12,7 +12,7 @@
 
 .cards>* {
   /* height: 200px; */
-  height: 250px;
+  height: 265px;
 }
 
 /* .artist-card {
@@ -44,3 +44,8 @@
 .artist-img {
   margin-top: 15px;
 }
+
+/* p.card-text {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+} */

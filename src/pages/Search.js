@@ -32,11 +32,16 @@ const Search = () => {
     try {
       await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
         .then(response => {
-          // artist
-          setSearchResults(response.data.artists.items)
-          // album --> response.data.albums.items
-
-          // song --> response.data.tracks.items
+          if (dropDownValue === 'artist') {
+            // artist
+            setSearchResults(response.data.artists.items)
+          } else if (dropDownValue === 'album') {
+            // album --> response.data.albums.items
+            setSearchResults(response.data.albums.items)
+          } else if (dropDownValue === 'track') {
+            // song --> response.data.tracks.items
+            setSearchResults(response.data.tracks.items)
+          }
         })
     } catch (err) {
       console.log(err)
