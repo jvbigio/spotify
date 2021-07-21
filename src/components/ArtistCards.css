@@ -4,6 +4,7 @@
   grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
   grid-gap: 0.5rem;
+  grid-gap: 1rem;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;

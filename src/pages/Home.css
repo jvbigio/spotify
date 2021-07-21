@@ -11,6 +11,10 @@
   text-align: center;
 } */
 
+.home-card {
+  color: whitesmoke;
+}
+
 .home-card .homeImg {
   /* width: 100vw;
   height: 100vh; */
@@ -19,5 +23,4 @@
   /* box-shadow:inset 0px 0px 3px 1px rgba(0, 0, 0, 1); */
   /* filter: blur(8px);
   -webkit-filter: blur(8px); */
-
 }
