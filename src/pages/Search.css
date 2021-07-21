@@ -47,22 +47,27 @@ button:focus, input {
   display: flex;
   flex-direction: row;
   width: 100%;
-  /* height: 100vh; */
-  /* testing: */
-  /* background: black; */
   margin-left: 40px;
-  /* border: 3px solid red; */
-  /* background: background-color #000000; */
-  /* background: linear-gradient(315deg, #000000 0%, #7f8c8d 74%); */
 }
 
-.content {
+/* ???? where is this: */
+/* .content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 20px;
   width: 100%;
   height: 100%;
-  /* background: black; */
+} */
+.response-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
 }
 

@@ -1,18 +1,26 @@
 .cards {
   display: grid;
-  /* grid-template-columns: repeat(5, 1fr); */
+  grid-template-columns: repeat(5, 1fr);
   grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
-  grid-gap: 0.5rem;
-  grid-gap: 1rem;
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
+  /* grid-gap: 0.5rem; */
+  /* grid-gap: .5rem; */
+  /* grid-gap: 1rem;
+  gap: 1rem; */
+  margin: 1rem;
+  /* margin-top: 20px; */
+  /* TEST */
+  /* margin-top: 90px; */
+  /* margin-left: 45px; */
+  /* border: 4px solid red; */
+  /* End TEST */
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
-/* .cards>* {
-  height: 265px;
-} */
+.cards>* {
+  height: 320px;
+}
 
 /* .artist-card {
   border: 2px solid #e7e7e7;
@@ -21,6 +29,7 @@
 } */
 
 .artist-card.card {
+  /* margin-top: 50px; */
   display: flex;
   flex-direction: column;
   align-items: center;

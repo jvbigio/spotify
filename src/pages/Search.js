@@ -93,7 +93,9 @@ const Search = () => {
         </Form>
       </div>
       <div className='content-wrapper'>
-        <div className='cards'>
+        {/* orig */}
+        {/* <div className='cards'> */}
+        <div className='response-cards'>
           {renderResponseData}
         </div>
       </div>
