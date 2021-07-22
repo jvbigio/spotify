@@ -1,5 +1,10 @@
 import React, { useState } from 'react'
 import './Search.css'
+
+import ArtistCards from '../components/ArtistCards'
+import AlbumCards from '../components/AlbumCards'
+import SongCards from '../components/SongCards'
+
 import {
   Form,
   InputGroup,
@@ -13,8 +18,6 @@ import { BsSearch } from 'react-icons/bs'
 
 import authToken from '../controllers/token-service'
 import axios from 'axios'
-import ArtistCards from '../components/ArtistCards'
-import AlbumCards from '../components/AlbumCards'
 
 authToken.getAuthToken()
 
@@ -85,10 +88,15 @@ const Search = () => {
           handleClick={() => handleClick(result.name)}
         />
       )
-    } else {
+    } else if (dropDownValue === 'track') {
       return (
-        // SongCards
-        console.log('SongCards')
+        <SongCards
+          key={result.id}
+          artist={result}
+          artistPic={result}
+          dropDownValue={dropDownValue}
+          handleClick={() => handleClick(result.name)}
+        />
       )
     }
   })

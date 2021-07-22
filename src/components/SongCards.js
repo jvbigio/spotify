@@ -7,7 +7,7 @@ import music from '../images/flat-music.png'
 
 const SongCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
   // console.log(dropDownValue)
-  const artistMedia = artist.images[0]
+  const artistMedia = artist.images
   const hasMedia = () => artistMedia ? artistMedia.url : music
 
   return (
@@ -20,9 +20,9 @@ const SongCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
           <Card.Text>
             {artist.name}
           </Card.Text>
-          <Card.Text className='secondary-text'>
-            {artist.artists[0].name}
-          </Card.Text>
+          {/* <Card.Text className='secondary-text'>
+            {artist.artists.name}
+          </Card.Text> */}
         </Card.Body>
       </Card>
     </div>
