@@ -1,0 +1,32 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 186px);
+  grid-auto-rows: auto;
+  margin: 1rem;
+}
+
+.cards>* {
+  height: 320px;
+}
+
+.artist-card.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  cursor: pointer;
+  color: whitesmoke;
+  background: #303030;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: .5rem;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
+}
+
+.artist-img {
+  margin-top: 15px;
+}
+
+.secondary-text {
+  font-weight: 200;
+}
