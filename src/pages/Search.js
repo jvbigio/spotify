@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './Search.css'
 import {
   Form,
   InputGroup,
   DropdownButton,
-  Dropdown,
-  Image
+  Dropdown
+  // Image
 } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
-import musicNotes from '../images/musicNotes.png'
-import musicBG from '../images/search-bg.png'
+// import musicNotes from '../images/musicNotes.png'
+// import musicBG from '../images/search-bg.png'
 
 import authToken from '../controllers/token-service'
 import axios from 'axios'
 import ArtistCards from '../components/ArtistCards'
+import AlbumCards from '../components/AlbumCards'
 
 authToken.getAuthToken()
 
@@ -53,15 +54,41 @@ const Search = () => {
     console.log(`Card clicked: ${name}`)
   }
 
-  const renderResponseData = searchResults.map(result => (
-    <ArtistCards
-      key={result.id}
-      artist={result}
-      artistPic={result}
-      dropDownValue={dropDownValue} // test
-      handleClick={() => handleClick(result.name)}
-    />
-  ))
+  // original
+  // const renderResponseData = searchResults.map(result => (
+  //   <ArtistCards
+  //     key={result.id}
+  //     artist={result}
+  //     artistPic={result}
+  //     dropDownValue={dropDownValue}
+  //     handleClick={() => handleClick(result.name)}
+  //   />
+  // ))
+  const renderResponseData = searchResults.map(result => {
+    if (dropDownValue === 'artist') {
+      return (
+        <ArtistCards
+          key={result.id}
+          artist={result}
+          artistPic={result}
+          dropDownValue={dropDownValue}
+          handleClick={() => handleClick(result.name)}
+        />
+      )
+    } else if (dropDownValue === 'album') {
+      return (
+        <AlbumCards
+          key={result.id}
+          artist={result}
+          artistPic={result}
+          dropDownValue={dropDownValue}
+          handleClick={() => handleClick(result.name)}
+        />
+      )
+    }
+  })
+
+  // create another function for getAlbumCards?
 
   return (
     <div className='search-container'>

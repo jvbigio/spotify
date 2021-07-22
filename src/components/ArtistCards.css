@@ -51,6 +51,8 @@
 
 .artist-img {
   margin-top: 15px;
+  width: 100%;
+  height: 100%;
 }
 
 /* p.card-text {
@@ -58,6 +60,6 @@
   margin-bottom: 20px;
 } */
 
-.secondary-text {
+/* .secondary-text {
   font-weight: 200;
-}
+} */
