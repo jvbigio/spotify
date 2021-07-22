@@ -85,6 +85,11 @@ const Search = () => {
           handleClick={() => handleClick(result.name)}
         />
       )
+    } else {
+      return (
+        // SongCards
+        console.log('SongCards')
+      )
     }
   })
 
