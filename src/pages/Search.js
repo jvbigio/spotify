@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Search.css'
+// import '../components/SongCards.css'
 
 import ArtistCards from '../components/ArtistCards'
 import AlbumCards from '../components/AlbumCards'
@@ -37,13 +38,10 @@ const Search = () => {
       await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
         .then(response => {
           if (dropDownValue === 'artist') {
-            // artist
             setSearchResults(response.data.artists.items)
           } else if (dropDownValue === 'album') {
-            // album --> response.data.albums.items
             setSearchResults(response.data.albums.items)
           } else if (dropDownValue === 'track') {
-            // song --> response.data.tracks.items
             setSearchResults(response.data.tracks.items)
           }
         })
@@ -135,7 +133,9 @@ const Search = () => {
       <div className='content-wrapper'>
         {/* orig */}
         {/* <div className='cards'> */}
+        {/* <div className='response-cards' style={dropDownValue === 'track' ? { flexDirection: 'column' } : { flexDirection: 'row' }}> */}
         <div className='response-cards'>
+          {/* <div className={dropDownValue === 'track' ? 'track-response' : 'response-cards'} id='track-cards'> */}
           {renderResponseData}
         </div>
       </div>
