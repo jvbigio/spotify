@@ -5,6 +5,12 @@ import { Card, Image } from 'react-bootstrap'
 
 import music from '../images/flat-music.png'
 
+const millisToMinutesAndSeconds = (millis) => {
+  const minutes = Math.floor(millis / 60000)
+  const seconds = ((millis % 60000) / 1000).toFixed(0)
+  return minutes + ':' + (seconds < 10 ? '0' : '') + seconds
+}
+
 const SongCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
   console.log(artist.duration_ms)
   // response.data.tracks.items
@@ -26,7 +32,8 @@ const SongCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
             {artist.album.name}
           </Card.Text>
           <Card.Text className='secondary-text' as='div'>
-            {artist.duration_ms}
+            {/* {artist.duration_ms} */}
+            {millisToMinutesAndSeconds(artist.duration_ms)}
           </Card.Text>
         </Card.Body>
       </Card>
