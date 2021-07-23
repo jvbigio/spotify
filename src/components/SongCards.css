@@ -5,19 +5,9 @@
   width: 900px;
   align-items: center;
   justify-content: center;
-  margin-left: 20px;
+  flex-wrap: wrap;
 
 }
-
-/* .song-card {
-  flex-direction: row;
-  justify-content: center;
-} */
-
-/* .song-cards>* {
-  flex-direction: row;
-  justify-content: center;
-} */
 
 /* the card itself (inside) */
 .song-card.card {
@@ -34,23 +24,22 @@
   padding: .5rem;
   margin: .5rem;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
-  /* text-align: left; */
-}
-
-.card.body {
-  flex-direction: row;
-  /* display: flex;
-  justify-content: center; */
 }
 
 .song-img {
   display: flex;
   height: 64px;
   width: 64px;
-  /* margin-left: 40px; */
 }
 
 .secondary-text {
-  font-weight: 200;
+  font-weight: 100;
   color: whitesmoke;
+}
+
+.primary-text, .secondary-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
 }
