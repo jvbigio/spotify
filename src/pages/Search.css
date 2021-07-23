@@ -48,7 +48,8 @@ button:focus, input {
   flex-direction: row;
   /* flex-direction: column; */
   width: 100%;
-  margin-left: 40px;
+  /* margin-left: 40px; */
+  flex-wrap: wrap;
 }
 
 /* ???? where is this: */
@@ -62,7 +63,6 @@ button:focus, input {
 } */
 .response-cards {
   display: flex;
-  /* change to column for songs */
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -72,9 +72,3 @@ button:focus, input {
   width: 100%;
   height: 100%;
 }
-
-/* #song-cards {
-  display: flex;
-  flex-direction: column;
-  width: 800px;
-} */
