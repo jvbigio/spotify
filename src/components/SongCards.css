@@ -9,37 +9,22 @@
 
 }
 
-/* #song-cards {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  width: 900px;
-  align-items: center;
+/* .song-card {
+  flex-direction: row;
   justify-content: center;
-  margin-left: 20px;
 } */
 
-.song-cards>* {
-  /* margin-top: 50px; */
-  /* height: 100px; */
-  /* width: 900px; */
-}
-
-#song-cards>* {
-  /* margin-top: 50px; */
-  /* height: 320px; */
-  /* width: 900px; */
-}
+/* .song-cards>* {
+  flex-direction: row;
+  justify-content: center;
+} */
 
 /* the card itself (inside) */
 .song-card.card {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  /* justify-content: flex-start; */
-  /* flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   width: 100%;
   cursor: pointer;
   color: whitesmoke;
@@ -47,33 +32,15 @@
   cursor: pointer;
   border-radius: 4px;
   padding: .5rem;
+  margin: .5rem;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
   text-align: left;
 }
 
-#song-card.card {
-  display: flex;
-  /* flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  width: 100%;
-  cursor: pointer;
-  color: whitesmoke;
-  background: #303030;
-  cursor: pointer;
-  border-radius: 4px;
-  padding: .5rem;
-  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
-  /* text-align: left; */
-}
-
 .song-img {
   display: flex;
-  /* width: 50%; */
-  /* height: 80%; */
   height: 64px;
   width: 64px;
-  /* align-items: center; */
 }
 
 .secondary-text {
