@@ -16,9 +16,9 @@ const SongCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
     <div className='song-cards'>
       <Card className='song-card' onClick={(e) => handleClick(e)}>
         <a href={(artistMedia) ? artist.external_urls.spotify : null} target='_blank' rel='noreferrer'>
-          <Image className='song-img' id='song-img' src={hasMedia()} fluid />
+          <Image className='song-img pl-2' id='song-img' src={hasMedia()} fluid />
         </a>
-        <Card.Body>
+        <Card.Body className='content-titles d-flex justify-content-between'>
           <Card.Text as='div'>
             {artist.name}
           </Card.Text>
