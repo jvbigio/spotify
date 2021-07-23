@@ -9,16 +9,15 @@
 
 }
 
-#song-cards {
+/* #song-cards {
   display: flex;
   flex-direction: column;
   width: 100%;
   width: 900px;
-  /* height: 200px; */
   align-items: center;
   justify-content: center;
   margin-left: 20px;
-}
+} */
 
 .song-cards>* {
   /* margin-top: 50px; */
@@ -37,6 +36,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* justify-content: flex-start; */
   /* flex-direction: column;
   align-items: center;
   justify-content: center; */
@@ -48,7 +48,7 @@
   border-radius: 4px;
   padding: .5rem;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
-  /* text-align: left; */
+  text-align: left;
 }
 
 #song-card.card {
@@ -78,4 +78,5 @@
 
 .secondary-text {
   font-weight: 200;
+  color: whitesmoke;
 }

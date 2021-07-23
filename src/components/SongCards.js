@@ -26,9 +26,9 @@ const SongCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
           <Card.Text>
             {artist.name}
           </Card.Text>
-          {/* <Card.Text className='secondary-text'>
+          <Card.Text className='secondary-text'>
             {artist.artists.name}
-          </Card.Text> */}
+          </Card.Text>
         </Card.Body>
       </Card>
     </div>
