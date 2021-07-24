@@ -37,7 +37,8 @@
   color: whitesmoke;
 }
 
-.primary-text, .secondary-text {
+.primary-text,
+.secondary-text {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
