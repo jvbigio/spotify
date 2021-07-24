@@ -12,7 +12,6 @@ const millisToMinutesAndSeconds = (millis) => {
 }
 
 const SongCards = ({ artist, artistPic, dropDownValue }) => {
-  console.log(artist.duration_ms)
   const artistMedia = artist.album.images[2]
   const hasMedia = () => artistMedia ? artistMedia.url : music
 
