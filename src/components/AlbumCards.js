@@ -10,7 +10,7 @@ const AlbumCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
   const hasMedia = () => artistMedia ? artistMedia.url : music
 
   return (
-    <div className='cards'>
+    <div className='album-cards'>
       <Card className='album-card' onClick={(e) => handleClick(e)}>
         <a href={(artistMedia) ? artist.external_urls.spotify : null} target='_blank' rel='noreferrer'>
           <Image className='artist-img rounded-circle w-90 h-75' src={hasMedia()} fluid />
