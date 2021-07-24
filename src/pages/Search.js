@@ -82,8 +82,6 @@ const Search = () => {
     }
   })
 
-  // create another function for getAlbumCards?
-
   return (
     <div className='search-container'>
       <div className='search-form'>
