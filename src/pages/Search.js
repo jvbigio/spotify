@@ -10,7 +10,6 @@ import {
   InputGroup,
   DropdownButton,
   Dropdown
-  // Image
 } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
 

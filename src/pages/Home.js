@@ -1,9 +1,6 @@
 import React from 'react'
 import './Home.css'
 import Image from 'react-bootstrap/Image'
-// import vinylRecord from '../images/vinyl-record.jpg'
-// import musicNotes from '../images/music-notes.png'
-// import musical from '../images/music-chord-bg.jpg'
 
 const Home = () => {
   return (

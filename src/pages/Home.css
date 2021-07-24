@@ -1,26 +1,8 @@
-/* .home-card {
-  width: 270px;
-  text-align: right;
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  align-items: flex-start;
-}
-
-.title {
-  text-align: center;
-} */
-
 .home-card {
   color: whitesmoke;
 }
 
 .home-card .homeImg {
-  /* width: 100vw;
-  height: 100vh; */
   height: 50%;
   width: 50%;
-  /* box-shadow:inset 0px 0px 3px 1px rgba(0, 0, 0, 1); */
-  /* filter: blur(8px);
-  -webkit-filter: blur(8px); */
 }
