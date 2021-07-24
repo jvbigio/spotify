@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Search.css'
-// import '../components/SongCards.css'
 
 import ArtistCards from '../components/ArtistCards'
 import AlbumCards from '../components/AlbumCards'
@@ -14,8 +13,6 @@ import {
   // Image
 } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
-// import musicNotes from '../images/musicNotes.png'
-// import musicBG from '../images/search-bg.png'
 
 import authToken from '../controllers/token-service'
 import axios from 'axios'
@@ -112,11 +109,7 @@ const Search = () => {
         </Form>
       </div>
       <div className='content-wrapper'>
-        {/* orig */}
-        {/* <div className='cards'> */}
-        {/* <div className='response-cards' style={dropDownValue === 'track' ? { flexDirection: 'column' } : { flexDirection: 'row' }}> */}
         <div className='response-cards'>
-          {/* <div className={dropDownValue === 'track' ? 'track-response' : 'response-cards'} id='track-cards'> */}
           {renderResponseData}
         </div>
       </div>
