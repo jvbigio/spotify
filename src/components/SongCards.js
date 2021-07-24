@@ -11,15 +11,19 @@ const millisToMinutesAndSeconds = (millis) => {
   return minutes + ':' + (seconds < 10 ? '0' : '') + seconds
 }
 
-const SongCards = ({ artist, artistPic, dropDownValue }) => {
+const SongCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
+  console.log(artist.duration_ms)
+  // response.data.tracks.items
+  // console.log(artist.album.images[2])
   const artistMedia = artist.album.images[2]
   const hasMedia = () => artistMedia ? artistMedia.url : music
 
   return (
     <div className='song-cards'>
-      <Card className='artist-card' onClick={() => window.open(artist.external_urls.spotify, '_blank')}>
+      <Card className='song-card' onClick={() => window.open(artist.external_urls.spotify, '_blank')}>
+
         <a href={(artistMedia) ? artist.external_urls.spotify : null} target='_blank' rel='noreferrer'>
-          <Image className='song-img pl-2' id='song-img' src={hasMedia()} fluid />
+          <Image className='song-img pl-2' src={hasMedia()} fluid />
         </a>
         <Card.Body className='content-titles d-flex justify-content-between'>
           <Card.Text className='primary-text' as='div'>
