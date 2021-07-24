@@ -1,8 +1,31 @@
-.home-card {
+/* ORIGINAL */
+
+/* .home-card {
   color: whitesmoke;
 }
 
 .home-card .homeImg {
   height: 50%;
   width: 50%;
+} */
+
+/* END ORIGINAL */
+
+.home-card {
+  /* display: flex;
+  flex-direction: column; */
+  color: whitesmoke;
+  height: 100%;
+  width: 100%;
+}
+
+.slide-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-basis: 100%;
+  width: 100%;
 }
