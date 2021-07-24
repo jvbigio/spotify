@@ -1,11 +1,11 @@
-.cards {
+.album-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
   margin: 1rem;
 }
 
-.cards>* {
+.album-cards>* {
   height: 340px;
   height: 320px;
 }
