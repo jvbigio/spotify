@@ -5,13 +5,13 @@ import { Card, Image } from 'react-bootstrap'
 
 import music from '../images/flat-music.png'
 
-const ArtistCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
+const ArtistCards = ({ artist, artistPic, dropDownValue }) => {
   const artistMedia = artist.images[0]
   const hasMedia = () => artistMedia ? artistMedia.url : music
 
   return (
     <div className='artist-cards'>
-      <Card className='artist-card' onClick={(e) => handleClick(e)}>
+      <Card className='artist-card' onClick={() => window.open(artist.external_urls.spotify, '_blank')}>
         <a href={(artistMedia) ? artist.external_urls.spotify : null} target='_blank' rel='noreferrer'>
           <Image className='rounded-circle mt-2 w-100 h-100 p-1' id='artist-img' src={hasMedia()} fluid />
         </a>

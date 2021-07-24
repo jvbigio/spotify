@@ -51,20 +51,6 @@ const Search = () => {
     setSearchInput('')
   }
 
-  const handleClick = name => {
-    console.log(`Card clicked: ${name}`)
-  }
-
-  // original
-  // const renderResponseData = searchResults.map(result => (
-  //   <ArtistCards
-  //     key={result.id}
-  //     artist={result}
-  //     artistPic={result}
-  //     dropDownValue={dropDownValue}
-  //     handleClick={() => handleClick(result.name)}
-  //   />
-  // ))
   const renderResponseData = searchResults.map(result => {
     if (dropDownValue === 'artist') {
       return (
@@ -73,7 +59,6 @@ const Search = () => {
           artist={result}
           artistPic={result}
           dropDownValue={dropDownValue}
-          handleClick={() => handleClick(result.name)}
         />
       )
     } else if (dropDownValue === 'album') {
@@ -83,7 +68,6 @@ const Search = () => {
           artist={result}
           artistPic={result}
           dropDownValue={dropDownValue}
-          handleClick={() => handleClick(result.name)}
         />
       )
     } else if (dropDownValue === 'track') {
@@ -93,7 +77,6 @@ const Search = () => {
           artist={result}
           artistPic={result}
           dropDownValue={dropDownValue}
-          handleClick={() => handleClick(result.name)}
         />
       )
     }
