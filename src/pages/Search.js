@@ -9,7 +9,9 @@ import {
   Form,
   InputGroup,
   DropdownButton,
-  Dropdown
+  Dropdown,
+  ButtonGroup,
+  Button
 } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
 
@@ -103,6 +105,9 @@ const Search = () => {
                 <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>album</Dropdown.Item>
                 <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>track</Dropdown.Item>
               </DropdownButton>
+              <Dropdown as={ButtonGroup} className='dropdown-btn'>
+                <Button variant='info'>Enter</Button>
+              </Dropdown>
             </InputGroup>
           </Form.Group>
         </Form>
