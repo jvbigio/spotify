@@ -12,7 +12,7 @@ const Home = () => {
         <p>This app allows a user to search for an artist, album or song. Users can save 5 of their favorite music artists and generate a random song from these musicians.</p>
       </div>
       <div className='image-container'>
-        <Image src={vinyl} fluid />
+        <Image className='rounded-circle w-50 h-50' src={vinyl} fluid />
       </div>
     </div>
   )
