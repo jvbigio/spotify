@@ -11,9 +11,9 @@ const Home = () => {
       <div className='intro'>
         <p>This app allows a user to search for an artist, album or song. Users can save 5 of their favorite music artists and generate a random song from these musicians.</p>
       </div>
-      <div className='image-container'>
-        {/* <div className='image-blurred-edge' /> */}
-        <Image className='rounded-circle w-75 h-75 image-blurred-edge d-flex justify-content-center flex-xl-row' src={vinyl} fluid />
+      <div className='image-container d-flex flex-row justify-content-center'>
+        <div className='image-blurred-edge' />
+        {/* <Image className='w-75 h-75 image-blurred-edge' src={vinyl} fluid /> */}
       </div>
     </div>
   )
