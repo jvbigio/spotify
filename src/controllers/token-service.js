@@ -20,7 +20,7 @@ const getAuthToken = () => {
     }
 
     return axios
-      .post(URL, 'grant_type=authorization_code', config)
+      .post(URL, 'grant_type=client_credentials', config)
       .then(response => {
         axios.defaults.headers.common = {
           Authorization: `Bearer ${response.data.access_token}`
