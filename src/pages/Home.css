@@ -26,6 +26,20 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  flex-basis: 100%;
   width: 100%;
+  flex-basis: 100%;
 }
+
+.image-container {
+  display: flex;
+  width: 100%;
+  /* justify-content: center;
+   background-image: url('http://lorempixel.com/200/200/city/9');
+   width: 200px;
+   height: 200px; */
+   /* you need to match the shadow color to your background or image border for the desired effect*/
+   /* box-shadow: 0 0 8px 8px white inset;
+   box-shadow: 0 0 8px 8px black inset;
+   box-shadow: 0 0 8px 8px #414141 inset; */
+}
+
