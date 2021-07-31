@@ -17,6 +17,22 @@ const Random = () => {
     { name: 'Tiesto', imageSrc: tiesto }
   ])
 
+  const [randomSong, setRandomSong] = useState([])
+
+  const handleClick = name => console.log(name)
+
+  const getRandomCards = favArtists.map(artist => {
+    return (
+      <RandomCards
+        key={artist.name}
+        name={artist.name}
+        imageSrc={artist.imageSrc}
+        // ??
+        handleClick={() => handleClick(artist.name)}
+      />
+    )
+  })
+
   return (
     <div />
   )
