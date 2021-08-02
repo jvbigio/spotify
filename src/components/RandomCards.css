@@ -2,11 +2,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
-  margin: 1rem;
+  margin: 0.75rem;
 }
 
 .random-cards>* {
-  height: 250px;
+  height: 240px;
 }
 
 .random-card.card {
