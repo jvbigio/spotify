@@ -34,7 +34,11 @@ const Random = () => {
   })
 
   return (
-    <div />
+    <div className='random-wrapper'>
+      <div className='random-artist-cards'>
+        {getRandomCards}
+      </div>
+    </div>
   )
 }
 
