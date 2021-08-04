@@ -19,7 +19,28 @@ const Random = () => {
     { id: '2o5jDhtHVPhrJdv3cEQ99Z', name: 'Tiesto', imageSrc: tiesto }
   ])
 
-  const [randomSong, setRandomSong] = useState([])
+  const [randomSong, setRandomSong] = useState([
+    {
+      artist: 'Drake',
+      songs: ['Hotline Bling', 'Passionfruit', 'Gods Plan', 'Over the Top']
+    },
+    {
+      artist: 'Linkin Park',
+      songs: ['In the End', 'Numb', "What I've Done", 'Leave Out All the Rest']
+    },
+    {
+      artist: 'Metallica',
+      songs: ['Nothing Else Matters', 'Enter Sandman', 'Wherever I may Roam', 'The Unforgiven']
+    },
+    {
+      artist: 'The Weeknd',
+      songs: ['Starboy', 'Blinding Lights', 'I Feel it Coming', 'The Hills']
+    },
+    {
+      artist: 'Tiesto',
+      songs: ['The Business', 'BOOM', 'Adagio for Strings', 'Higher Power']
+    }
+  ])
 
   const handleClick = async (name) => {
     // console.log(name)
