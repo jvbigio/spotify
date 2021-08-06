@@ -19,33 +19,35 @@ const Random = () => {
     { id: '2o5jDhtHVPhrJdv3cEQ99Z', name: 'Tiesto', imageSrc: tiesto }
   ])
 
-  const [randomSong, setRandomSong] = useState([
-    {
-      artist: 'Drake',
-      songs: ['Hotline Bling', 'Passionfruit', 'Gods Plan', 'Over the Top']
-    },
-    {
-      artist: 'Linkin Park',
-      songs: ['In the End', 'Numb', "What I've Done", 'Leave Out All the Rest']
-    },
-    {
-      artist: 'Metallica',
-      songs: ['Nothing Else Matters', 'Enter Sandman', 'Wherever I may Roam', 'The Unforgiven']
-    },
-    {
-      artist: 'The Weeknd',
-      songs: ['Starboy', 'Blinding Lights', 'I Feel it Coming', 'The Hills']
-    },
-    {
-      artist: 'Tiesto',
-      songs: ['The Business', 'BOOM', 'Adagio for Strings', 'Higher Power']
-    }
-  ])
+  const [randomSong, setRandomSong] = useState([])
 
-  const handleClick = async (name) => {
-    // console.log(name)
+  // found top-tracks on spotify api
+  // const [randomSong, setRandomSong] = useState([
+  //   {
+  //     artist: 'Drake',
+  //     songs: ['Hotline Bling', 'Passionfruit', 'Gods Plan', 'Over the Top']
+  //   },
+  //   {
+  //     artist: 'Linkin Park',
+  //     songs: ['In the End', 'Numb', "What I've Done", 'Leave Out All the Rest']
+  //   },
+  //   {
+  //     artist: 'Metallica',
+  //     songs: ['Nothing Else Matters', 'Enter Sandman', 'Wherever I may Roam', 'The Unforgiven']
+  //   },
+  //   {
+  //     artist: 'The Weeknd',
+  //     songs: ['Starboy', 'Blinding Lights', 'I Feel it Coming', 'The Hills']
+  //   },
+  //   {
+  //     artist: 'Tiesto',
+  //     songs: ['The Business', 'BOOM', 'Adagio for Strings', 'Higher Power']
+  //   }
+  // ])
+
+  const handleClick = async (id) => {
     try {
-      await axios.get(`https://api.spotify.com/v1/search?q=${name}&type=track&limit=1`)
+      await axios.get(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=us`)
         .then(response => {
           setRandomSong(response.data.artists.items)
           console.log(randomSong)
@@ -61,7 +63,7 @@ const Random = () => {
         key={artist.id}
         name={artist.name}
         imageSrc={artist.imageSrc}
-        handleClick={() => handleClick(artist.name)}
+        handleClick={() => handleClick(artist.id)}
       />
     )
   })
