@@ -46,10 +46,12 @@ const Random = () => {
   // ])
 
   const handleClick = async (id) => {
+    // console.log(id) // works
     try {
       await axios.get(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=us`)
         .then(response => {
-          setRandomSong(response.data.artists.items)
+          // setRandomSong(response.data.tracks.name)
+          setRandomSong(response.data.tracks.album)
           console.log(randomSong)
         })
     } catch (err) {
