@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './Random.css'
 import RandomCards from '../components/RandomCards'
+// test
+import SongCards from '../components/SongCards'
 
 import axios from 'axios'
 
@@ -20,30 +22,6 @@ const Random = () => {
   ])
 
   const [randomSong, setRandomSong] = useState([])
-
-  // found top-tracks on spotify api
-  // const [randomSong, setRandomSong] = useState([
-  //   {
-  //     artist: 'Drake',
-  //     songs: ['Hotline Bling', 'Passionfruit', 'Gods Plan', 'Over the Top']
-  //   },
-  //   {
-  //     artist: 'Linkin Park',
-  //     songs: ['In the End', 'Numb', "What I've Done", 'Leave Out All the Rest']
-  //   },
-  //   {
-  //     artist: 'Metallica',
-  //     songs: ['Nothing Else Matters', 'Enter Sandman', 'Wherever I may Roam', 'The Unforgiven']
-  //   },
-  //   {
-  //     artist: 'The Weeknd',
-  //     songs: ['Starboy', 'Blinding Lights', 'I Feel it Coming', 'The Hills']
-  //   },
-  //   {
-  //     artist: 'Tiesto',
-  //     songs: ['The Business', 'BOOM', 'Adagio for Strings', 'Higher Power']
-  //   }
-  // ])
 
   const handleClick = async (id) => {
     try {
@@ -68,10 +46,21 @@ const Random = () => {
     )
   })
 
+  const renderRandomSong = randomSong.map(song => {
+    return (
+      <SongCards
+        key={song.id}
+        artist={song}
+        artistPic={song}
+      />
+    )
+  })
+
   return (
     <div className='random-wrapper'>
       <div className='random-artist-cards'>
         {getRandomCards}
+        {renderRandomSong}
       </div>
     </div>
   )
