@@ -25,7 +25,7 @@ const Random = () => {
 
   const handleClick = async (id) => {
     try {
-      await axios.get(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=us`)
+      await axios.get(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=us&limit=1`)
         .then(response => {
           setRandomSong(response.data.tracks)
           console.log(randomSong)
@@ -47,6 +47,9 @@ const Random = () => {
   })
 
   const renderRandomSong = randomSong.map(song => {
+    // handleClick gets top tracks
+    // now randomize and only show one here:
+    console.log(randomSong)
     return (
       <SongCards
         key={song.id}
