@@ -28,7 +28,10 @@ const Random = () => {
       await axios.get(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=us&limit=1`)
         .then(response => {
           setRandomSong(response.data.tracks)
-          console.log(randomSong)
+          // setRandomSong(response.data.tracks[Math.floor(Math.random() * randomSong.length)])
+          // console.log(randomSong.length)
+          // setRandomSong([Math.floor(Math.random() * randomSong.length)])
+          // setRandomSong(Math.floor(Math.random() * randomSong.length))
         })
     } catch (err) {
       console.log(err)
@@ -49,10 +52,12 @@ const Random = () => {
   const renderRandomSong = randomSong.map(song => {
     // handleClick gets top tracks
     // now randomize and only show one here:
-    console.log(randomSong)
+    // console.log(randomSong)
+
     return (
       <SongCards
         key={song.id}
+        // artist={song[Math.floor(Math.random() * song.length)]}
         artist={song}
         artistPic={song}
       />
@@ -63,7 +68,8 @@ const Random = () => {
     <div className='random-wrapper'>
       <div className='random-artist-cards'>
         {getRandomCards}
-        {renderRandomSong}
+        {/* {renderRandomSong} */}
+        {hrenderRandomSong}
       </div>
     </div>
   )
