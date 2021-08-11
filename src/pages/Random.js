@@ -69,7 +69,7 @@ const Random = () => {
       <div className='random-artist-cards'>
         {getRandomCards}
         {/* {renderRandomSong} */}
-        {hrenderRandomSong}
+        {renderRandomSong}
       </div>
     </div>
   )
