@@ -36,6 +36,7 @@ const Random = () => {
     } catch (err) {
       console.log(err)
     }
+    // setRandomSong(randomSong[Math.floor(Math.random() * (randomSong.length - 1))])
   }
 
   const getRandomCards = favArtists.map(artist => {
@@ -52,7 +53,7 @@ const Random = () => {
   const renderRandomSong = randomSong.map(song => {
     // handleClick gets top tracks
     // now randomize and only show one here:
-    // console.log(randomSong)
+    console.log(song.name) // works
 
     return (
       <SongCards
@@ -68,7 +69,6 @@ const Random = () => {
     <div className='random-wrapper'>
       <div className='random-artist-cards'>
         {getRandomCards}
-        {/* {renderRandomSong} */}
         {renderRandomSong}
       </div>
     </div>
