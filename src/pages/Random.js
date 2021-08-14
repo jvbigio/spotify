@@ -60,7 +60,9 @@ const Random = () => {
     <div className='random-wrapper'>
       <div className='random-artist-cards'>
         {getRandomCards}
-        {renderRandomSong[Math.floor(Math.random() * randomSong.length)]}
+        <div className='random-song'>
+          {renderRandomSong[Math.floor(Math.random() * randomSong.length)]}
+        </div>
       </div>
     </div>
   )
