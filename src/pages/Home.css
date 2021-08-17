@@ -16,6 +16,8 @@
   grid-template-rows: repeat(2, auto);
   grid-template-rows: repeat(2, 20vw);
   /* test: */
+  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+  /* test: */
   /* align-items: center; */
   gap: 15px;
   /* gap: 25px; */

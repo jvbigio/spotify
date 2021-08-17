@@ -9,6 +9,7 @@ import album3 from '../images/grid-img-3.png'
 import album4 from '../images/grid-img-4.png'
 import album5 from '../images/grid-img-5.png'
 import album6 from '../images/grid-img-6.png'
+import album7 from '../images/grid-img-7.png'
 
 const Home = () => {
   return (

@@ -1,3 +1,9 @@
+/* test */
+/* .sidebar-content {
+  height: 100vh;
+} */
+/* end test */
+
 .spotify-logo {
   font-size: 64px;
   color: #1db954;
@@ -5,6 +11,6 @@
 
 @media screen and (max-width: 400px) {
   .spotify-logo {
-    font-size: 24px;
+    display: none;
   }
 }
