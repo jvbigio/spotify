@@ -46,7 +46,6 @@ const Random = () => {
   })
 
   const renderRandomSong = randomSong.map(song => {
-    // console.log(song.name) // works
     return (
       <SongCards
         key={song.id}
