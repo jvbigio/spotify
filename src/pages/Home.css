@@ -11,12 +11,16 @@
 
 .gallery {
   display: grid;
+  /* orig: */
   grid-template-columns: repeat(3, 1fr);
   /* orig is 20vw: */
-  grid-template-rows: repeat(2, auto);
   grid-template-rows: repeat(2, 20vw);
+  /* grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(2, auto-fit); */
   /* test: */
-  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+  /* grid-template-columns: repeat(3, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(200px, 19vw)); */
+
   /* test: */
   /* align-items: center; */
   gap: 15px;
@@ -31,17 +35,13 @@
 }
 
 /* test */
-@media screen and (max-width: 640px) {
+/* @media screen and (max-width: 640px) {
   .home-card {
     display: flex;
     flex-wrap: wrap;
   }
   .gallery {
-    /* works below */
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: column;
   }
-  .gallery__img {
-    width: 75%;
-  }
-}
+} */
