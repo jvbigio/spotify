@@ -1,16 +1,45 @@
 .home-card {
   color: whitesmoke;
+  /* test */
+  /* display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-basis: content;
+  flex-direction: column; */
+  /* end test */
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* orig is 20vw: */
+  grid-template-rows: repeat(2, auto);
   grid-template-rows: repeat(2, 20vw);
+  /* test: */
+  /* align-items: center; */
   gap: 15px;
+  /* gap: 25px; */
 }
+
 
 .gallery__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* test */
+@media screen and (max-width: 640px) {
+  .home-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gallery {
+    /* works below */
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+  .gallery__img {
+    width: 75%;
+  }
 }

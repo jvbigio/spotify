@@ -1,8 +1,8 @@
 import React from 'react'
 import './Home.css'
-import { Image, Carousel } from 'react-bootstrap'
+// import { Image, Carousel } from 'react-bootstrap'
+// import vinyl from '../images/vinyl-record.jpg'
 
-import vinyl from '../images/vinyl-record.jpg'
 import album1 from '../images/grid-img-1.png'
 import album2 from '../images/grid-img-2.png'
 import album3 from '../images/grid-img-3.png'
