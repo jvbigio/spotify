@@ -17,6 +17,7 @@ const ArtistCards = ({ artist, artistPic, dropDownValue }) => {
         </a>
         <Card.Body>
           <Card.Text>
+            {/* {artist.name} */}
             {artist.name}
           </Card.Text>
         </Card.Body>

@@ -21,6 +21,7 @@ const AlbumCards = ({ artist, artistPic, dropDownValue }) => {
           </Card.Text>
           <Card.Text className='secondary-text'>
             {artist.artists[0].name}
+            {/* {dropDownValue === 'artist' ? null : artist.artists[0].name} */}
           </Card.Text>
         </Card.Body>
       </Card>
