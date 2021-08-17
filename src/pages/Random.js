@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './Random.css'
 import RandomCards from '../components/RandomCards'
-// test
 import SongCards from '../components/SongCards'
 
 import axios from 'axios'

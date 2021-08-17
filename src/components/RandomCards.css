@@ -3,6 +3,10 @@
   grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
   margin: 0.75rem;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center; */
 }
 
 .random-cards>* {
@@ -21,23 +25,4 @@
   border-radius: 4px;
   padding: .5rem;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
-}
-
-.random-wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.random-artist-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-left: 20px;
-  margin-top: 50px;
-  width: 100%;
-  height: 100%;
 }
