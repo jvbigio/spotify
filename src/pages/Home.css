@@ -1,44 +1,9 @@
-/* ORIGINAL */
-
-/* .home-card {
+.home-card {
   color: whitesmoke;
 }
 
 .home-card .homeImg {
   height: 50%;
   width: 50%;
-} */
-
-/* END ORIGINAL */
-
-.home-card {
-  /* display: flex;
-  flex-direction: column; */
-  color: whitesmoke;
-  height: 100%;
-  width: 100%;
 }
 
-.slide-container {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-  flex-basis: 100%;
-}
-
-.image-container {
-  display: flex;
-  width: 100%;
-}
-
-.image-blurred-edge {
-  background-image: url('http://lorempixel.com/200/200/city/9');
-  width: 200px;
-  height: 200px;
-  /* you need to match the shadow color to your background or image border for the desired effect*/
-  box-shadow: 0 0 8px 8px white inset;
-}
