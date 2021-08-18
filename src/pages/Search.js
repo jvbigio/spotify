@@ -25,10 +25,23 @@ const Search = () => {
 
   const getUserInput = e => setSearchInput(e.target.value)
 
-  const handleDropdownClick = e => setDropdownValue(e.target.textContent)
+  // const handleDropdownClick = e => setDropdownValue(e.target.textContent) // orig
+  const handleDropdownClick = e => {
+    setDropdownValue(e.target.textContent)
+    // setDropdownValue(e)
+
+    // if (searchResults) {
+    //   return searchResults
+    // } else {
+    //   setSearchResults([])
+    //   setDropdownValue('')
+    // }
+  }
 
   const handleSearch = async (e) => {
     e.preventDefault()
+    // console.log(e.key)
+    // (!searchInput) ? return false : searchInput
 
     try {
       await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
@@ -40,11 +53,21 @@ const Search = () => {
           } else if (dropDownValue === 'track') {
             setSearchResults(response.data.tracks.items)
           }
+          // test
+          // setDropdownValue('')
         })
     } catch (err) {
       console.log(err)
     }
     setSearchInput('')
+    // setSearchResults([])
+    // setDropdownValue('')
+    // if (searchResults) {
+    //   return searchResults
+    // } else {
+    //   setSearchResults([])
+    //   setDropdownValue('')
+    // }
   }
 
   const renderResponseData = searchResults.map(result => {
@@ -76,6 +99,9 @@ const Search = () => {
         />
       )
     }
+    // test
+    // setSearchResults([])
+    // setDropdownValue('')
   })
 
   return (
@@ -92,6 +118,9 @@ const Search = () => {
                 placeholder='Artist, album, or song'
                 value={searchInput}
                 onChange={(e) => getUserInput(e)}
+                // test:
+                onKeyPress={(e) => { e.key === 'Enter' && !hsearchInput }}
+                // onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault() }}
               />
               <DropdownButton
                 as={InputGroup.Append}
