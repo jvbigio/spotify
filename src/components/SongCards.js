@@ -1,7 +1,7 @@
 import React from 'react'
 import './SongCards.css'
 
-import { Card, Image } from 'react-bootstrap'
+import { Card, Col, Image, Row, Container } from 'react-bootstrap'
 
 import music from '../images/flat-music.png'
 
@@ -16,25 +16,37 @@ const SongCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
   const hasMedia = () => artistMedia ? artistMedia.url : music
 
   return (
-    <div className='song-cards'>
-      <Card className='song-card' onClick={() => window.open(artist.external_urls.spotify, '_blank')}>
+    <Container>
+      <div className='song-cards'>
+        <Card className='song-card' onClick={() => window.open(artist.external_urls.spotify, '_blank')}>
 
-        <a href={(artistMedia) ? artist.external_urls.spotify : null} target='_blank' rel='noreferrer'>
-          <Image className='song-img pl-2' src={hasMedia()} fluid />
-        </a>
-        <Card.Body className='content-titles d-flex justify-content-between'>
-          <Card.Text className='primary-text' as='div'>
-            {artist.name}
-          </Card.Text>
-          <Card.Text className='secondary-text' as='div'>
-            {artist.album.name}
-          </Card.Text>
-          <Card.Text className='secondary-text' as='div'>
-            {millisToMinutesAndSeconds(artist.duration_ms)}
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </div>
+          <Card.Body className='content-titles d-flex justify-content-between'>
+            <Row>
+              <Col xs='3'>
+                <a href={(artistMedia) ? artist.external_urls.spotify : null} target='_blank' rel='noreferrer'>
+                  <Image className='song-img pl-2' src={hasMedia()} fluid />
+                </a>
+              </Col>
+              <Col xs='3'>
+                <Card.Text className='primary-text' as='div'>
+                  {artist.name}
+                </Card.Text>
+              </Col>
+              <Col xs='3'>
+                <Card.Text className='secondary-text' as='div'>
+                  {artist.album.name}
+                </Card.Text>
+              </Col>
+              <Col xs='3' className='float-right'>
+                <Card.Text className='secondary-text' as='div'>
+                  {millisToMinutesAndSeconds(artist.duration_ms)}
+                </Card.Text>
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
+      </div>
+    </Container>
   )
 }
 
