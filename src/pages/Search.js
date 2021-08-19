@@ -24,8 +24,7 @@ const Search = () => {
   const [dropDownValue, setDropdownValue] = useState('')
 
   const getUserInput = e => setSearchInput(e.target.value)
-
-  // const handleDropdownClick = e => setDropdownValue(e.target.textContent) // orig
+h
   const handleDropdownClick = e => {
     setDropdownValue(e.target.textContent)
     // setDropdownValue(e)
@@ -119,7 +118,7 @@ const Search = () => {
                 value={searchInput}
                 onChange={(e) => getUserInput(e)}
                 // test:
-                onKeyPress={(e) => { e.key === 'Enter' && !hsearchInput }}
+                // onKeyPress={(e) => { e.key === 'Enter' && !searchInput }}
                 // onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault() }}
               />
               <DropdownButton
