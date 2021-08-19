@@ -28,18 +28,11 @@ const Search = () => {
   const handleDropdownClick = e => {
     setDropdownValue(e.target.textContent)
 
-    // if (searchResults) {
-    //   return searchResults
-    // } else {
-    //   setSearchResults([])
-    //   setDropdownValue('')
-    // }
+    setSearchResults([])
   }
 
   const handleSearch = async (e) => {
     e.preventDefault()
-    // console.log(e.key)
-    // (!searchInput) ? return false : searchInput
 
     try {
       await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
@@ -51,21 +44,11 @@ const Search = () => {
           } else if (dropDownValue === 'track') {
             setSearchResults(response.data.tracks.items)
           }
-          // test
-          // setDropdownValue('')
         })
     } catch (err) {
       console.log(err)
     }
     setSearchInput('')
-    // setSearchResults([])
-    // setDropdownValue('')
-    // if (searchResults) {
-    //   return searchResults
-    // } else {
-    //   setSearchResults([])
-    //   setDropdownValue('')
-    // }
   }
 
   const renderResponseData = searchResults.map(result => {
@@ -97,9 +80,6 @@ const Search = () => {
         />
       )
     }
-    // test
-    // setSearchResults([])
-    // setDropdownValue('')
   })
 
   return (

@@ -17,8 +17,7 @@ const ArtistCards = ({ artist, artistPic, dropDownValue }) => {
         </a>
         <Card.Body>
           <Card.Text>
-            {/* {artist.name} */}
-            {dropDownValue === 'artist' ? artist.name : null}
+            {artist.name}
           </Card.Text>
         </Card.Body>
       </Card>
