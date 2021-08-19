@@ -16,12 +16,31 @@
 
 #input-group-dropdown {
   margin-top: 20px;
-  border-radius: 0 25px 25px 0;
+  /* border-radius: 0 25px 25px 0; */
 }
 
 button:focus, input {
   box-shadow: none !important;
   outline: none !important;
+}
+
+#search-btn {
+  display: flex;
+  color: whitesmoke;
+  background: black;
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
+  margin-left: 16px;
+  border-radius: 25px;
+  /* padding: 10px; */
+  /* border-radius: 0 25px 25px 0; */
+  /* border-radius: 20px; */
+  /* align-items: center; */
+  /* margin-bottom: 17px; */
+  /* padding-right: 10px;
+  padding-bottom: 10px; */
+  /* text-align: center;
+  font-weight: inherit; */
 }
 
 .content-wrapper {

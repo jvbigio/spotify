@@ -9,7 +9,8 @@ import {
   Form,
   InputGroup,
   DropdownButton,
-  Dropdown
+  Dropdown,
+  Button
 } from 'react-bootstrap'
 import { BsSearch } from 'react-icons/bs'
 
@@ -85,7 +86,7 @@ const Search = () => {
   return (
     <div className='search-container'>
       <div className='search-form'>
-        <Form onSubmit={handleSearch} className='input-search justify-content-center w-50' autoComplete='off'>
+        <Form onSubmit={handleSearch} className='input-search justify-content-center w-75 d-flex' autoComplete='off'>
           <Form.Group controlId='form-search' autoComplete='off'>
             <InputGroup>
               <InputGroup.Prepend>
@@ -112,6 +113,16 @@ const Search = () => {
               </DropdownButton>
             </InputGroup>
           </Form.Group>
+          <div className='search-btn'>
+            <Button
+              id='search-btn'
+              disabled={!searchInput}
+              variant='dark'
+              type='submit'
+            >
+              Enter
+            </Button>
+          </div>
         </Form>
       </div>
       <div className='content-wrapper'>
