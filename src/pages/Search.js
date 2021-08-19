@@ -27,7 +27,6 @@ const Search = () => {
 
   const handleDropdownClick = e => {
     setDropdownValue(e.target.textContent)
-    // setDropdownValue(e)
 
     // if (searchResults) {
     //   return searchResults
