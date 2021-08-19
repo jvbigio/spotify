@@ -24,7 +24,7 @@ const Search = () => {
   const [dropDownValue, setDropdownValue] = useState('')
 
   const getUserInput = e => setSearchInput(e.target.value)
-h
+
   const handleDropdownClick = e => {
     setDropdownValue(e.target.textContent)
     // setDropdownValue(e)
