@@ -35,14 +35,27 @@
   cursor: pointer;
 }
 
-/* test */
-/* @media screen and (max-width: 640px) {
+@media screen and (max-width: 640px) {
   .home-card {
     display: flex;
     flex-wrap: wrap;
   }
-  .gallery {
-    display: flex;
-    flex-direction: column;
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
-} */
+  .intro {
+    display: none;
+  }
+  .gallery {
+    /* display: flex;
+    flex-direction: column; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 40vw);
+    gap: 10px;
+  }
+  /* .gallery__img {
+    width: 40%;
+  } */
+}
