@@ -29,6 +29,10 @@
     grid-template-columns: repeat(2, auto);
     grid-auto-rows: auto;
     margin: 0.5rem; */
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 190px;
   }
   .artist-cards>* {
     height: 200px;

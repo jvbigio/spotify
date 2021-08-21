@@ -123,7 +123,7 @@ const Search = () => {
         </Form>
       </div>
       <div className='content-wrapper'>
-        <div className='response-cards'>
+        <div className='response-cards' id='response-data'>
           {renderResponseData}
         </div>
       </div>
