@@ -1,30 +1,12 @@
 .home-card {
   color: whitesmoke;
-  /* test */
-  /* display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-basis: content;
-  flex-direction: column; */
-  /* end test */
 }
 
 .gallery {
   display: grid;
-  /* orig: */
   grid-template-columns: repeat(3, 1fr);
-  /* orig is 20vw: */
   grid-template-rows: repeat(2, 20vw);
-  /* grid-template-rows: repeat(2, auto);
-  grid-template-rows: repeat(2, auto-fit); */
-  /* test: */
-  /* grid-template-columns: repeat(3, minmax(240px, 1fr));
-  grid-template-columns: repeat(3, minmax(200px, 19vw)); */
-
-  /* test: */
-  /* align-items: center; */
   gap: 15px;
-  /* gap: 25px; */
 }
 
 
