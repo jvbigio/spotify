@@ -30,7 +30,6 @@ button:focus, input {
   margin-top: 20px;
   margin-left: 16px;
   border-radius: 10px;
-  /* border-radius: 0 25px 25px 0; */
 }
 
 .content-wrapper {
@@ -50,4 +49,21 @@ button:focus, input {
   margin-top: 20px;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  .search-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .search-form {
+    justify-content: center;
+  }
+  .input-search {
+    flex-wrap: wrap;
+  }
+  #form-search {
+    width: 270px;
+  }
 }

@@ -97,9 +97,6 @@ const Search = () => {
                 placeholder='Artist, album, or song'
                 value={searchInput}
                 onChange={(e) => getUserInput(e)}
-                // test:
-                // onKeyPress={(e) => { e.key === 'Enter' && !searchInput }}
-                // onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault() }}
               />
               <DropdownButton
                 as={InputGroup.Append}

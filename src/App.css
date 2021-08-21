@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-/* html body {
-  font-family: 'Baloo Tammudu 2', cursive;
-  font-family: 'Roboto', sans-serif;
-} */
-
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -19,6 +14,5 @@
 
 .content {
   margin-top: 20px;
-  /* test */
   width: 100%;
 }
