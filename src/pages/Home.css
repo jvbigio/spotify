@@ -49,13 +49,19 @@
     display: none;
   }
   .gallery {
-    /* display: flex;
-    flex-direction: column; */
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 40vw);
     gap: 10px;
   }
-  /* .gallery__img {
-    width: 40%;
-  } */
+  .ipKNkI {
+    display: none;
+  }
+  .ipKNkI.toggled {
+    display: block;
+    min-width: 80px;
+    width: 80px;
+  }
+  .head-div {
+    display: none;
+  }
 }
