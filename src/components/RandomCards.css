@@ -3,10 +3,6 @@
   grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
   margin: 0.75rem;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center; */
 }
 
 .random-cards>* {
@@ -25,4 +21,17 @@
   border-radius: 4px;
   padding: .5rem;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
+}
+
+@media screen and (max-width: 640px) {
+  .random-cards {
+    grid-template-columns: repeat(1, auto-fit);
+    margin: .5rem;
+    width: 100%;
+    /* display: flex;
+    flex-direction: column; */
+  }
+  .random-cards>* {
+    height: 140px;
+  }
 }

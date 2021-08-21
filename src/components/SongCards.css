@@ -44,3 +44,19 @@
   text-overflow: ellipsis;
   max-width: 200px;
 }
+
+@media screen and (max-width: 640px) {
+  .song-cards {
+    align-items: flex-start;
+  }
+  .song-card.card {
+    text-align: center;
+    width: 250px;
+  }
+  .song-img {
+    display: none;
+  }
+  .secondary-text {
+    display: none;
+  }
+}

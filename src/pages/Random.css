@@ -14,3 +14,9 @@
 .random-song {
   margin-top: 80px;
 }
+
+@media screen and (max-width: 640px) {
+  .random-artist-cards {
+    margin-top: 0;
+  }
+}
