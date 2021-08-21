@@ -1,5 +1,23 @@
 .home-card {
   color: whitesmoke;
+  /* test */
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  flex-basis: 100;
+}
+
+.title {
+  font-size: 60px;
+}
+
+.intro {
+  font-size: 30px;
+}
+
+.title, .intro {
+  font-family: 'Caveat', cursive;
 }
 
 .gallery {
