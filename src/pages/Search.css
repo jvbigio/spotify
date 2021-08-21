@@ -1,3 +1,7 @@
+.search-container {
+  /* display: flex; */
+}
+
 .search-form {
   display: flex;
   flex-direction: row;
@@ -57,12 +61,15 @@ button:focus, input {
     width: 100%;
     justify-content: center;
   }
+
   .search-form {
     justify-content: center;
   }
+
   .input-search {
     flex-wrap: wrap;
   }
+
   #form-search {
     width: 270px;
   }
