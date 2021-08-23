@@ -28,8 +28,6 @@
     grid-template-columns: repeat(1, auto-fit);
     margin: .5rem;
     width: 100%;
-    /* display: flex;
-    flex-direction: column; */
   }
   .random-cards>* {
     height: 140px;
@@ -41,11 +39,8 @@
     width: 200px;
   }
   .random-card-img {
-    /* display: flex; */
-    /* height: 50%; */
     display: none;
     width: 100px;
     text-align: center;
-    
   }
 }
