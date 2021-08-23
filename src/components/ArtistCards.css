@@ -3,6 +3,10 @@
   grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
   margin: 1rem;
+  /* test */
+  width: 100%;
+  /* border: 5px solid red; */
+  /* display: block; */
 }
 
 .artist-cards>* {
@@ -29,16 +33,28 @@
     grid-template-columns: repeat(2, auto);
     grid-auto-rows: auto;
     margin: 0.5rem; */
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: 190px;
+    /* orig: */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* height: auto; */
+    /* width: 190px; */
   }
   .artist-cards>* {
-    height: 200px;
+    height: 100px;
   }
   .artist-card.card {
     padding: .25rem;
     width: 150px;
+    width: 250px;
+    /* test */
+    display: flex;
+    /* display: none; */
+  }
+  #artist-img {
+    display: flex;
+    /* display: none; */
+    border-radius: 0;
+    width: 60px;
+    height: 60px;
   }
 }

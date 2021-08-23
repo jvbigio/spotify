@@ -84,50 +84,57 @@ const Search = () => {
   })
 
   return (
-    <div className='search-container'>
-      <div className='search-form'>
-        <Form onSubmit={handleSearch} className='input-search justify-content-center w-75 d-flex' autoComplete='off'>
-          <Form.Group controlId='form-search' autoComplete='off'>
-            <InputGroup>
-              <InputGroup.Prepend>
-                <InputGroup.Text id='form-icon'><BsSearch /></InputGroup.Text>
-              </InputGroup.Prepend>
-              <Form.Control
-                type='text'
-                placeholder='Artist, album, or song'
-                value={searchInput}
-                onChange={(e) => getUserInput(e)}
-              />
-              <DropdownButton
-                as={InputGroup.Append}
-                variant='info'
-                title={dropDownValue}
-                id='input-group-dropdown'
+    <>
+      <div className='search-container'>
+        <div className='search-form'>
+          <Form onSubmit={handleSearch} className='input-search justify-content-center w-75 d-flex' autoComplete='off'>
+            <Form.Group controlId='form-search' autoComplete='off'>
+              <InputGroup>
+                <InputGroup.Prepend>
+                  <InputGroup.Text id='form-icon'><BsSearch /></InputGroup.Text>
+                </InputGroup.Prepend>
+                <Form.Control
+                  type='text'
+                  placeholder='Artist, album, or song'
+                  value={searchInput}
+                  onChange={(e) => getUserInput(e)}
+                />
+                <DropdownButton
+                  as={InputGroup.Append}
+                  variant='info'
+                  title={dropDownValue}
+                  id='input-group-dropdown'
+                >
+                  <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>artist</Dropdown.Item>
+                  <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>album</Dropdown.Item>
+                  <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>track</Dropdown.Item>
+                </DropdownButton>
+              </InputGroup>
+            </Form.Group>
+            <div className='search-btn'>
+              <Button
+                id='search-btn'
+                disabled={!searchInput}
+                variant='dark'
+                type='submit'
               >
-                <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>artist</Dropdown.Item>
-                <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>album</Dropdown.Item>
-                <Dropdown.Item onClick={(e) => handleDropdownClick(e)} href='#'>track</Dropdown.Item>
-              </DropdownButton>
-            </InputGroup>
-          </Form.Group>
-          <div className='search-btn'>
-            <Button
-              id='search-btn'
-              disabled={!searchInput}
-              variant='dark'
-              type='submit'
-            >
-              Enter
-            </Button>
+                Enter
+              </Button>
+            </div>
+          </Form>
+        </div>
+        {/* <div className='content-wrapper'>
+          <div className='response-cards' id='response-data'>
+            {renderResponseData}
           </div>
-        </Form>
+        </div> */}
       </div>
       <div className='content-wrapper'>
         <div className='response-cards' id='response-data'>
           {renderResponseData}
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
