@@ -29,7 +29,9 @@ const SongCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
           <Card.Text className='secondary-text' as='div'>
             {artist.album.name}
           </Card.Text>
-          <Card.Text className='secondary-text' as='div'>
+          {/* orig: */}
+          {/* <Card.Text className='secondary-text' as='div'>  */}
+          <Card.Text className='song-duration' as='div'>
             {millisToMinutesAndSeconds(artist.duration_ms)}
           </Card.Text>
         </Card.Body>

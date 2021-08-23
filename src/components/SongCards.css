@@ -32,7 +32,7 @@
   width: 64px;
 }
 
-.secondary-text {
+.secondary-text, .song-duration {
   font-weight: 100;
   color: whitesmoke;
 }
@@ -56,6 +56,14 @@
   .song-img {
     display: none;
   }
+  /* test: */
+  .primary-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+  }
+  /* end test */
   .secondary-text {
     display: none;
   }

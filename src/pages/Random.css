@@ -18,5 +18,13 @@
 @media screen and (max-width: 640px) {
   .random-artist-cards {
     margin-top: 0;
+    /* test: */
+    /* width: 30px;
+    height: auto; */
   }
+  /* test */
+  /* .primary-text,
+  .secondary-text {
+    text-align: left;
+  } */
 }

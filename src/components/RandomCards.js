@@ -7,7 +7,7 @@ const RandomCards = ({ name, imageSrc, handleClick }) => {
   return (
     <div className='random-cards'>
       <Card className='random-card' onClick={(e) => handleClick(e)}>
-        <Image className='rounded-circle mt-2 w-75 h-50 p-1' src={imageSrc} fluid />
+        <Image className='mt-2 w-75 h-50 p-1 random-card-img' src={imageSrc} rounded fluid />
         <Card.Body>
           <Card.Text>
             {name}
