@@ -27,20 +27,15 @@
 @media screen and (max-width: 640px) {
   .artist-cards {
     display: flex;
-    /* flex-direction: row;
-    justify-content: center; */
     width: 75%;
-    /* margin: 0.5rem; */
   }
   .artist-cards>* {
     height: 100px;
-    /* margin: 0; */
   }
   .artist-card.card {
     padding: .25rem;
     width: 250px;
     height: 75px;
-    /* border: 5px solid red; */
     flex-direction: row;
     align-items: center;
     align-content: center;
@@ -48,22 +43,11 @@
   #artist-img {
     display: flex;
     flex-direction: row;
-    /* display: none; */
-    /* height: 25%;
-    width: 25%;
-    border-radius: 4px; */
-    /* min-width: 50%;
-    min-height: 50%; */
     max-height: 50px;
     max-width: 64px;
-    /* border-radius: 4px; */
     margin-left: .45rem;
-    /* border: 5px solid red; */
   }
   p.card-text {
     text-align: center;
-    /* padding-left: 0; */
-    /* border: 5px solid red; */
-
   }
 }
