@@ -16,7 +16,7 @@ const ArtistCards = ({ artist, artistPic, dropDownValue }) => {
           <Image className='rounded-circle mt-2 w-100 h-100 p-1' id='artist-img' src={hasMedia()} fluid />
         </a>
         <Card.Body>
-          <Card.Text>
+          <Card.Text className='artist-name'>
             {artist.name}
           </Card.Text>
         </Card.Body>

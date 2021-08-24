@@ -13,13 +13,13 @@ const AlbumCards = ({ artist, artistPic, dropDownValue }) => {
     <div className='album-cards'>
       <Card className='album-card' onClick={() => window.open(artist.external_urls.spotify, '_blank')}>
         <a href={(artistMedia) ? artist.external_urls.spotify : null} target='_blank' rel='noreferrer'>
-          <Image className='album-img w-90 h-75' src={hasMedia()} rounded fluid />
+          <Image className='w-90 h-75' id='album-img' src={hasMedia()} rounded fluid />
         </a>
-        <Card.Body className='pt-0'>
-          <Card.Text>
+        <Card.Body className='album-text pt-0'>
+          <Card.Text className='album-name'>
             {artist.name}
           </Card.Text>
-          <Card.Text className='secondary-text'>
+          <Card.Text className='album-secondary-text'>
             {artist.artists[0].name}
           </Card.Text>
         </Card.Body>

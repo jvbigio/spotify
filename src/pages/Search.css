@@ -1,6 +1,6 @@
-.search-container {
-  /* display: flex; */
-}
+/* .search-container {
+  display: flex;
+} */
 
 .search-form {
   display: flex;
@@ -53,6 +53,9 @@ button:focus, input {
   align-items: center;
   margin-left: 20px;
   margin-top: 20px;
+  /* test: */
+  margin-top: 90px;
+  /* end */
   width: 100%;
   height: 100%;
 }
@@ -97,10 +100,12 @@ button:focus, input {
     height: 100%;
     width: 100%;
     flex-direction: column;
-    /* border: 5px solid green; */
-    /* align-items: center; */
-    /* align-content: center; */
     margin-left: 0;
+    /* test */
+    margin-top: 50px;
+    align-items: center;
+    /* border: 5px solid green; */
+    /* justify-content: center; */
   }
   /* #response-data {
     height: 100px;

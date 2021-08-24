@@ -47,7 +47,7 @@
     max-width: 64px;
     margin-left: .45rem;
   }
-  p.card-text {
+  .artist-name {
     text-align: center;
   }
 }
