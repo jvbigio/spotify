@@ -13,7 +13,7 @@ const AlbumCards = ({ artist, artistPic, dropDownValue }) => {
     <div className='album-cards'>
       <Card className='album-card' onClick={() => window.open(artist.external_urls.spotify, '_blank')}>
         <a href={(artistMedia) ? artist.external_urls.spotify : null} target='_blank' rel='noreferrer'>
-          <Image className='artist-img rounded-circle w-90 h-75' src={hasMedia()} fluid />
+          <Image className='album-img w-90 h-75' src={hasMedia()} rounded fluid />
         </a>
         <Card.Body className='pt-0'>
           <Card.Text>
