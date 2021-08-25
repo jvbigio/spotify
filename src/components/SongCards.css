@@ -15,7 +15,9 @@
   flex-direction: row;
   /* justify-content: space-between; */
   align-items: center;
+  /* orig 100%: */
   width: 100%;
+  width: 80%;
   cursor: pointer;
   color: whitesmoke;
   /* orig */
@@ -66,8 +68,9 @@
     text-align: center;
     width: 260px;
     /* background: #192734; */
-    /* test */
     height: 50px;
+    /* test */
+    width: 75%;
 
   }
   .song-img {

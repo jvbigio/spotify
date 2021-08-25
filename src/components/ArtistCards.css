@@ -5,7 +5,6 @@
   margin: 1rem;
   /* width causes cards to be column not row: */
   /* width: 100%; */
-  border: 5px dotted yellow;
 }
 
 .artist-cards>* {
@@ -51,5 +50,9 @@
   }
   .artist-name {
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90px;
   }
 }
