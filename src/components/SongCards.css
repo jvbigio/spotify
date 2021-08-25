@@ -49,6 +49,7 @@
   .song-card.card {
     text-align: center;
     width: 260px;
+    /* background: #1e0310;h */
   }
   .song-img {
     display: none;
