@@ -24,6 +24,8 @@
   margin-top: 80px;
   border: 5px solid green;
   width: 60%;
+  /* test width */
+  width: 75%;
   justify-content: center;
 }
 
