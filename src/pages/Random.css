@@ -2,12 +2,6 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  /* test */
-  /* border: 5px solid red; */
-  /* justify-content: center; */
-  /* width: 75%; */
-  /* flex-direction: row; */
-  /* height: 100%; */
 }
 
 .random-artist-cards {
@@ -15,7 +9,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-top: 50px;
 }
 
@@ -30,15 +24,15 @@
   margin-top: 80px;
   border: 5px solid green;
   width: 60%;
+  justify-content: center;
 }
 
 @media screen and (max-width: 640px) {
   .random-artist-cards {
     margin-top: 0;
   }
-  /* test */
-  /* .primary-text,
-  .secondary-text {
-    text-align: left;
-  } */
+  .random-song {
+    display: flex;
+    width: 100%;
+  }
 }

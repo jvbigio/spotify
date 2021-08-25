@@ -55,15 +55,6 @@ const Random = () => {
   })
 
   return (
-    // <div className='random-wrapper'>
-    //   <div className='random-artist-cards'>
-    //     {getRandomCards}
-    //     <div className='random-song'>
-    //       {renderRandomSong[Math.floor(Math.random() * randomSong.length)]}
-    //     </div>
-    //   </div>
-    // </div>
-    // test:
     <>
       <div className='random-wrapper'>
         <div className='random-artist-cards'>

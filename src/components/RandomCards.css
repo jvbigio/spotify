@@ -3,6 +3,8 @@
   grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
   margin: 0.75rem;
+  /* test: */
+  justify-content: center;
 }
 
 .random-cards>* {

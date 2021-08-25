@@ -1,4 +1,4 @@
-.song-cards {
+/* .song-cards { */
   /* display: flex;
   flex-direction: column;
   width: 900px;
@@ -6,14 +6,14 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap; */
-  border: 5px solid white;
-}
+  /* border: 5px solid white; */
+/* } */
 
 /* the card itself (inside) */
 .song-card.card {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
   cursor: pointer;
@@ -46,15 +46,9 @@
 }
 
 @media screen and (max-width: 640px) {
-  .song-cards {
-    /* align-items: flex-start; */
-    /* align-items: center; */
-    /* width: 100px; */
-    border: 5px solid purple;
-  }
   .song-card.card {
     text-align: center;
-    width: 250px;
+    width: 260px;
   }
   .song-img {
     display: none;
