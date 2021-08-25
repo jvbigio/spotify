@@ -98,6 +98,14 @@ const Search = () => {
                   placeholder='Artist, album, or song'
                   value={searchInput}
                   onChange={(e) => getUserInput(e)}
+                  className='large'
+                />
+                <Form.Control
+                  type='text'
+                  placeholder='Search...'
+                  value={searchInput}
+                  onChange={(e) => getUserInput(e)}
+                  className='small'
                 />
                 <DropdownButton
                   as={InputGroup.Append}
