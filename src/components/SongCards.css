@@ -18,7 +18,8 @@
   width: 100%;
   cursor: pointer;
   color: whitesmoke;
-  background: #303030;
+  /* background: #303030; */
+  background: #192734;
   cursor: pointer;
   border-radius: 4px;
   padding: .5rem;
@@ -49,7 +50,9 @@
   .song-card.card {
     text-align: center;
     width: 260px;
-    /* background: #1e0310;h */
+    /* background: #1e0310; */
+    background: #192734;
+
   }
   .song-img {
     display: none;
