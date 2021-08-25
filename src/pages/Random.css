@@ -38,4 +38,7 @@
     width: 100%;
     margin-top: 40px;
   }
+  .random-song .song-card {
+    background: #192734;
+  }
 }
