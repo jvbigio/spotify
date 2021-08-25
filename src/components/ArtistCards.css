@@ -3,7 +3,9 @@
   grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
   margin: 1rem;
-  width: 100%;
+  /* width causes cards to be column not row: */
+  /* width: 100%; */
+  border: 5px dotted yellow;
 }
 
 .artist-cards>* {
