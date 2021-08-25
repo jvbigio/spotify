@@ -1,12 +1,12 @@
 .song-cards {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  width: 100%;
   width: 900px;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-
+  flex-wrap: wrap; */
+  border: 5px solid white;
 }
 
 /* the card itself (inside) */
@@ -47,7 +47,10 @@
 
 @media screen and (max-width: 640px) {
   .song-cards {
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    /* align-items: center; */
+    /* width: 100px; */
+    border: 5px solid purple;
   }
   .song-card.card {
     text-align: center;

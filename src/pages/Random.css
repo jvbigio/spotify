@@ -1,5 +1,13 @@
 .random-wrapper {
   display: flex;
+  justify-content: center;
+  width: 100%;
+  /* test */
+  /* border: 5px solid red; */
+  /* justify-content: center; */
+  /* width: 75%; */
+  /* flex-direction: row; */
+  /* height: 100%; */
 }
 
 .random-artist-cards {
@@ -11,16 +19,22 @@
   margin-top: 50px;
 }
 
+.song-wrapper {
+  border: 5px solid yellow;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .random-song {
   margin-top: 80px;
+  border: 5px solid green;
+  width: 60%;
 }
 
 @media screen and (max-width: 640px) {
   .random-artist-cards {
     margin-top: 0;
-    /* test: */
-    /* width: 30px;
-    height: auto; */
   }
   /* test */
   /* .primary-text,
