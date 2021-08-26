@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Spotify Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React application that fetches Tweets from Twitter's API.
 
-## Available Scripts
+See it [here](https://yapper-jb.herokuapp.com/)
 
-In the project directory, you can run:
+# Images
 
-### `yarn start`
+Homepage:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![homepage](https://user-images.githubusercontent.com/43301741/131029614-32b82519-e317-4592-b6ac-897ee04ad5ae.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Search Twitter via content or username:
 
-### `yarn test`
+![twitter-search](https://user-images.githubusercontent.com/43301741/116852611-a4b0fe00-abc2-11eb-86fa-e50c545b7024.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Click on a Twitter user profile to generate a random Tweet:
 
-### `yarn build`
+![twitter-random](https://user-images.githubusercontent.com/43301741/116852682-c27e6300-abc2-11eb-8d85-69cac11d9537.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Instructions
+1) clone project
+2) cd into project
+3) run `npm i && npm i --prefix client`
+4) `touch .env` (this will create a .env file)
+5) follow the .env_sample file (include your API Key & API Secret Key)
+6) run `npm run dev`
+7) open a browser and navigate to `localhost:3000`
+# Summary
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This application utilizes Twitter's API to fetch Tweets. Users can search for a Tweet by a specific topic or by a Twitter username. Additionally, by clicking on a Twitter profile on the Random page, users can generate a random Tweet from any of the five Twitter profiles.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Twitter's API is handled via a Node server, with React handling the frontend.
 
-### `yarn eject`
+Building this app was loads of fun and had several challenges along the way! Some of these challenges included working with authentication, error handling, and manipulating Twitter's data.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+I look forward to adding more features, so stay tuned for more!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- _Joe Bigio_ Full-Stack Software Developer [Website](https://j-bigio-portfolio.netlify.app/) | [LinkedIn](https://www.linkedin.com/in/joelbigio/)
