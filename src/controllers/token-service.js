@@ -12,9 +12,7 @@ const getAuthToken = () => {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       auth: {
-        // username: process.env.REACT_APP_API_KEY,
         username: process.env.REACT_APP_CLIENT_ID,
-        // password: process.env.REACT_APP_API_SECRET_KEY
         password: process.env.REACT_APP_CLIENT_SECRET
       }
     }
@@ -25,7 +23,6 @@ const getAuthToken = () => {
         axios.defaults.headers.common = {
           Authorization: `Bearer ${response.data.access_token}`
         }
-        // console.log(response.data.access_token) // works
         return response.data.access_token
       })
   } catch (err) {
