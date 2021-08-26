@@ -3,8 +3,6 @@
   grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
   margin: 1rem;
-  /* width causes cards to be column not row: */
-  /* width: 100%; */
 }
 
 .artist-cards>* {
@@ -19,7 +17,6 @@
   cursor: pointer;
   color: whitesmoke;
   background: #303030;
-  cursor: pointer;
   border-radius: 4px;
   padding: .5rem;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
@@ -30,17 +27,18 @@
     display: flex;
     width: 75%;
   }
+
   .artist-cards>* {
     height: 100px;
   }
+
   .artist-card.card {
     padding: .25rem;
     width: 250px;
     height: 75px;
     flex-direction: row;
-    align-items: center;
-    align-content: center;
   }
+
   #artist-img {
     display: flex;
     flex-direction: row;
@@ -48,6 +46,7 @@
     max-width: 64px;
     margin-left: .45rem;
   }
+
   .artist-name {
     text-align: center;
     white-space: nowrap;
