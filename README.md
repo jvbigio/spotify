@@ -45,14 +45,15 @@ Click on a random artist to generate a random song:
 8) open a browser and navigate to `localhost:3000`
 # Summary
 
-This application utilizes Spotify's API to fetch artists, albums, or songs. Users can search for a Tweet by a specific topic or by a Twitter username. Additionally, by clicking on a Twitter profile on the Random page, users can generate a random Tweet from any of the five Twitter profiles.
+This application utilizes Spotify's API to fetch artists, albums, or songs. Users can go to the search page and choose from the dropdown menu options to tailor your search. Additionally, by clicking on an artist's profile on the random page, users are able to generate a random song from any of the 5 artists.
 
-Twitter's API is handled via a Node server, with React handling the frontend.
+This application is purely frontend and authenticates directly to Spotify's API via API keys.
 
-Building this app was loads of fun and had several challenges along the way! Some of these challenges included working with authentication, error handling, and manipulating Twitter's data.
+I had a lot of fun building this application and making it user friendly and Spotify themed. I wanted to challenge myself by making this purely frontend since my last project (Twitter clone) I built out a backend server to handle API keys and various tasks.
 
-I look forward to adding more features, so stay tuned for more!
+That said, I built this project after a brief hiatus and just wanted to have fun.
 
+Stay tuned for added features in the near future!
 # Author
 
 - _Joe Bigio_ Full-Stack Software Developer [Website](https://j-bigio-portfolio.netlify.app/) | [LinkedIn](https://www.linkedin.com/in/joelbigio/)
