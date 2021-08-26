@@ -44,8 +44,10 @@
 @media screen and (max-width: 640px) {
   .album-cards {
     display: flex;
-    width: 75%;
+    /* width: 75%; */
     margin-top: 0;
+    width: 90%;
+
   }
   .album-card.card {
     flex-direction: row;
@@ -53,9 +55,8 @@
     /* width: 300px; */
     /* height: 90px; */
     height: 100px;
-    width: 275px;
     width: 100%;
-    border: 5px solid whitesmoke;
+    width: 275px;
   }
   #album-img {
     display: flex;

@@ -137,4 +137,9 @@ button:focus, input {
     margin-top: 50px;
     width: 95%;
   }
+  .response-cards .album-card.card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
