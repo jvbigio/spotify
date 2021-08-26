@@ -18,6 +18,8 @@
   /* orig 100%: */
   width: 100%;
   width: 80%;
+  /* test width */
+  width: 50%;
   cursor: pointer;
   color: whitesmoke;
   /* orig */
@@ -66,11 +68,12 @@
 @media screen and (max-width: 640px) {
   .song-card.card {
     text-align: center;
+    width: 100%;
     width: 260px;
     /* background: #192734; */
     height: 50px;
     /* test */
-    width: 75%;
+    /* width: 75%; */
 
   }
   .song-img {
