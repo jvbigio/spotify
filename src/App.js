@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 import './App.css'
+
 import Home from './pages/Home'
 import Search from './pages/Search'
 import Random from './pages/Random'
