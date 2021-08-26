@@ -1,4 +1,7 @@
 import React from 'react'
+
+import './Sidebar.css'
+
 import {
   CDBSidebar,
   CDBSidebarContent,
@@ -7,16 +10,12 @@ import {
   CDBSidebarMenu,
   CDBSidebarMenuItem
 } from 'cdbreact'
+
 import { NavLink } from 'react-router-dom'
 import { FaSpotify } from 'react-icons/fa'
-import './Sidebar.css'
 
 const Sidebar = () => {
   return (
-    // orig
-    // <div
-    //   style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}
-    // >
     <div
       style={{ display: 'flex', height: '100vh' }}
     >

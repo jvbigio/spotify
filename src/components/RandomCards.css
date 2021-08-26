@@ -3,7 +3,6 @@
   grid-template-columns: repeat(auto-fit, 186px);
   grid-auto-rows: auto;
   margin: 0.75rem;
-  /* test: */
   justify-content: center;
 }
 
@@ -19,7 +18,6 @@
   cursor: pointer;
   color: whitesmoke;
   background: #303030;
-  cursor: pointer;
   border-radius: 4px;
   padding: .5rem;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
@@ -31,18 +29,19 @@
     margin: .5rem;
     width: 100%;
   }
+
   .random-cards>* {
     height: 140px;
   }
+
   .random-card.card {
-    width: 150px;
     flex-direction: row;
     height: 70px;
     width: 200px;
   }
+
   .random-card-img {
     display: none;
-    width: 100px;
     text-align: center;
   }
 }
