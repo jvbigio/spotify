@@ -81,6 +81,7 @@ const Search = () => {
         />
       )
     }
+    return result
   })
 
   return (
