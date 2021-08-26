@@ -22,7 +22,7 @@ const SongCards = ({ artist, artistPic, handleClick, dropDownValue }) => {
         <a href={(artistMedia) ? artist.external_urls.spotify : null} target='_blank' rel='noreferrer'>
           <Image className='song-img pl-2' src={hasMedia()} fluid />
         </a>
-        <Card.Body className='content-titles d-flex justify-content-between'>
+        <Card.Body className='d-flex justify-content-between'>
           <Card.Text className='primary-text' as='div'>
             {artist.name}
           </Card.Text>

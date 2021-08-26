@@ -1,36 +1,23 @@
 .song-cards {
   display: flex;
   flex-direction: column;
-  width: 900px;
-  width: 100%;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  /* border: 5px solid white; */
+  width: 100%;
 }
 
-/* the card itself (inside) */
 .song-card.card {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   align-items: center;
-  /* orig 100%: */
-  width: 100%;
-  width: 80%;
-  /* test width */
   width: 70%;
   cursor: pointer;
   color: whitesmoke;
-  /* orig */
-  background: #192734;
   background: #303030;
-  cursor: pointer;
   border-radius: 4px;
   padding: .5rem;
   margin-top: 1rem;
-  /* gap: 1rem; */
-  /* margin: .5rem; */
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .25);
 }
 
@@ -40,9 +27,8 @@
   width: 64px;
 }
 
-.secondary-text, .song-duration {
-  font-weight: 100;
-  color: whitesmoke;
+.primary-text {
+  max-width: 135px;
 }
 
 .primary-text,
@@ -50,32 +36,24 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  /* orig 200px */
-  max-width: 200px;
-  max-width: 150px;
-  max-width: 100px;
-  max-width: 90px;
 }
 
-/* test */
 .secondary-text {
-  max-width: 125px;
-  /* 100px best so far */
   max-width: 100px;
-  max-width: 90px;
+}
+
+.secondary-text, .song-duration {
+  font-weight: 100;
+  color: whitesmoke;
 }
 
 @media screen and (max-width: 640px) {
   .song-card.card {
     text-align: center;
-    width: 100%;
     width: 260px;
-    /* background: #192734; */
     height: 50px;
-    /* test */
-    /* width: 75%; */
-
   }
+
   .song-img {
     display: none;
   }
@@ -83,8 +61,8 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 140px;
   }
+  
   .secondary-text {
     display: none;
   }
