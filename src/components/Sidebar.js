@@ -13,8 +13,12 @@ import './Sidebar.css'
 
 const Sidebar = () => {
   return (
+    // orig
+    // <div
+    //   style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}
+    // >
     <div
-      style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}
+      style={{ display: 'flex', height: '100vh' }}
     >
       <CDBSidebar textColor='#fff' backgroundColor='black'>
         <CDBSidebarHeader prefix={<i className='fa fa-bars fa-large' />}>
