@@ -27,18 +27,15 @@
     display: flex;
     width: 75%;
   }
-
   .artist-cards>* {
     height: 100px;
   }
-
   .artist-card.card {
     padding: .25rem;
     width: 250px;
     height: 75px;
     flex-direction: row;
   }
-
   #artist-img {
     display: flex;
     flex-direction: row;
@@ -46,7 +43,6 @@
     max-width: 64px;
     margin-left: .45rem;
   }
-
   .artist-name {
     text-align: center;
     white-space: nowrap;

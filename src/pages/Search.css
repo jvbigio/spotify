@@ -70,32 +70,26 @@ button:focus, input {
     width: 100%;
     justify-content: center;
   }
-
   .search-form {
     justify-content: center;
   }
-
   .input-search {
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 100%;
   }
-
   input.large {
     display: none;
   }
-
   input.small {
     display: inline-block;
   }
-
   .content-wrapper {
     display: flex;
     flex-direction: column;
     width: 90%;
   }
-
   .response-cards {
     display: flex;
     height: 100%;
@@ -105,7 +99,6 @@ button:focus, input {
     margin-top: 50px;
     width: 95%;
   }
-
   .response-cards .album-card.card {
     display: flex;
     justify-content: center;

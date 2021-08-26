@@ -44,14 +44,12 @@
     margin-top: 0;
     width: 90%;
   }
-
   .album-card.card {
     flex-direction: row;
     align-items: center;
     height: 100px;
     width: 275px;
   }
-
   #album-img {
     display: flex;
     flex-direction: row;
@@ -60,7 +58,6 @@
     margin-left: .45rem;
     padding-top: 0;
   }
-
   .album-text {
     display: flex;
     width: 100%;
@@ -69,13 +66,11 @@
     padding: 0;
     font-size: 16px;
   }
-
   .album-name {
     font-size: 14px;
     max-width: 100px;
     text-align: center;
   }
-
   .album-secondary-text {
     font-size: 12px;
      white-space: nowrap;

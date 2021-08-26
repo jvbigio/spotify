@@ -29,17 +29,14 @@
     margin: .5rem;
     width: 100%;
   }
-
   .random-cards>* {
     height: 140px;
   }
-
   .random-card.card {
     flex-direction: row;
     height: 70px;
     width: 200px;
   }
-
   .random-card-img {
     display: none;
     text-align: center;

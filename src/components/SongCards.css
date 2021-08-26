@@ -53,7 +53,6 @@
     width: 260px;
     height: 50px;
   }
-
   .song-img {
     display: none;
   }
@@ -62,7 +61,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
   .secondary-text {
     display: none;
   }

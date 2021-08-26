@@ -9,12 +9,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  /* margin-left: 20px; */
   margin-top: 50px;
 }
 
 .song-wrapper {
-  /* border: 5px solid yellow; */
   display: flex;
   width: 100%;
   justify-content: center;
@@ -22,9 +20,6 @@
 
 .random-song {
   margin-top: 80px;
-  /* border: 5px solid green; */
-  width: 60%;
-  /* test width */
   width: 75%;
   justify-content: center;
 }
