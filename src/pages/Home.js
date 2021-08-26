@@ -13,7 +13,7 @@ const Home = () => {
     <div className='container home-card'>
       <h1 className='title'>Welcome to Spotify 2.0</h1>
       <div className='intro'>
-        <p>This app allows a user to search for an artist, album or song. Users can save 5 of their favorite music artists and generate a random song from these musicians.</p>
+        <p>This app allows a user to search for an artist, album or song. Users can also save 5 of their favorite music artists and generate a random song from these musicians.</p>
       </div>
       <div className='gallery'>
         <figure className='gallery__item gallery__item--1'>
