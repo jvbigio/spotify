@@ -74,7 +74,7 @@ button:focus, input {
   /* height: 100%; */
   width: 95%;
   width: 100%;
-  border: 5px solid red;
+  /* border: 5px solid red; */
 }
 
 @media screen and (max-width: 640px) {
@@ -113,7 +113,7 @@ button:focus, input {
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 5px solid yellow;
+    /* border: 5px solid yellow; */
   }
   /* test: */
   .response-cards {
