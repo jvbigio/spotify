@@ -1,6 +1,4 @@
 const axios = require('axios').default
-// dotenv does not work for frontend: ?????
-// require('dotenv').config()
 
 let bearer
 
@@ -14,8 +12,10 @@ const getAuthToken = () => {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
       auth: {
-        username: process.env.REACT_APP_API_KEY,
-        password: process.env.REACT_APP_API_SECRET_KEY
+        // username: process.env.REACT_APP_API_KEY,
+        username: process.env.REACT_APP_CLIENT_ID,
+        // password: process.env.REACT_APP_API_SECRET_KEY
+        password: process.env.REACT_APP_CLIENT_SECRET
       }
     }
 

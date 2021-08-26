@@ -10,19 +10,20 @@ Homepage:
 
 ![homepage](https://user-images.githubusercontent.com/43301741/131029614-32b82519-e317-4592-b6ac-897ee04ad5ae.png)
 
-Search Twitter via content or username:
+Search Spotify by artist, album, or song:
 
-![twitter-search](https://user-images.githubusercontent.com/43301741/116852611-a4b0fe00-abc2-11eb-86fa-e50c545b7024.png)
+![searchpage](https://user-images.githubusercontent.com/43301741/131030097-f2eea7b9-5249-4ce1-b744-1cdbf6bdaa93.png)
 
-Click on a Twitter user profile to generate a random Tweet:
+Sample of artist search:
 
-![twitter-random](https://user-images.githubusercontent.com/43301741/116852682-c27e6300-abc2-11eb-8d85-69cac11d9537.png)
+![artist-search](https://user-images.githubusercontent.com/43301741/131030392-4274acec-9bef-4bc8-a948-0077f0d5a979.png)
 
 # Instructions
 1) clone project
 2) cd into project
-3) run `npm i && npm i --prefix client`
-4) `touch .env` (this will create a .env file)
+3) go to `www.spotify.com` and create an account (Premium or Free)
+4) go to the `Dashboard` page and click `Create an App`. Complete steps
+5) `touch .env` (this will create a .env file)
 5) follow the .env_sample file (include your API Key & API Secret Key)
 6) run `npm run dev`
 7) open a browser and navigate to `localhost:3000`
