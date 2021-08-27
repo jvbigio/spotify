@@ -4,10 +4,6 @@
   cursor: pointer;
 }
 
-/* .ipKNkI.toggled .spotify-logo {
-  font-size: 40px;
-} */
-
 .pro-sidebar.toggled .spotify-logo {
   font-size: 40px !important;
 }
