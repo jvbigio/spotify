@@ -96,14 +96,9 @@ button:focus, input {
     flex-direction: column;
     margin-left: 0;
     padding-left: 0;
-    /* orig 50px: */
-    margin-top: 50px;
     margin-top: 25px;
     width: 95%;
   }
-  /* #response-data.response-cards {
-    margin-top: 20px;
-  } */
   .response-cards .album-card.card {
     display: flex;
     justify-content: center;
