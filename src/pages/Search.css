@@ -108,5 +108,6 @@ button:focus, input {
     display: flex;
     justify-content: center;
     width: 100%;
+    height: ;
   }
 }

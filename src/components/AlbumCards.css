@@ -47,7 +47,8 @@
   .album-card.card {
     flex-direction: row;
     align-items: center;
-    height: 100px;
+    /* height: 100px; */
+    height: 90px;
     width: 275px;
   }
   #album-img {
@@ -70,6 +71,7 @@
     font-size: 14px;
     max-width: 100px;
     text-align: center;
+    padding-top: 12px;
   }
   .album-secondary-text {
     font-size: 12px;
