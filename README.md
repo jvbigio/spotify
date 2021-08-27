@@ -49,7 +49,7 @@ This application utilizes Spotify's API to fetch artists, albums, or songs. User
 
 This application is purely frontend and authenticates directly to Spotify's API via API keys.
 
-I had a lot of fun building this application and making it user friendly and Spotify themed. I wanted to challenge myself by making this purely frontend since my last project (Twitter clone) I built out a backend server to handle API keys and various tasks.
+I had a lot of fun building this application and making it user friendly and Spotify themed. I wanted to challenge myself by making this purely frontend since my last project (Twitter clone) I built out a backend server to handle API requests and various tasks.
 
 That said, I built this project after a brief hiatus and just wanted to have fun.
 
