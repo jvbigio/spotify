@@ -2,7 +2,7 @@
 
 A responsive React application that fetches Tweets from Twitter's API.
 
-See it [here](https://yapper-jb.herokuapp.com/)
+See it [here](https://spotify-clone-jb.herokuapp.com/)
 
 # Images
 
