@@ -3,6 +3,10 @@
   color: #1db954;
 }
 
+.ipKNkI.toggled .spotify-logo {
+  font-size: 40px;
+}
+
 @media screen and (max-width: 415px) {
   .spotify-logo {
     display: none;
