@@ -1,6 +1,7 @@
 .spotify-logo {
   font-size: 64px;
   color: #1db954;
+  cursor: pointer;
 }
 
 .ipKNkI.toggled .spotify-logo {
