@@ -59,4 +59,7 @@
     text-overflow: ellipsis;
     max-width: 90px;
   }
+  /* .response-cards.artist-card.card {
+    margin-top: 0;
+  } */
 }
