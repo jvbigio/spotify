@@ -4,8 +4,12 @@
   cursor: pointer;
 }
 
-.ipKNkI.toggled .spotify-logo {
+/* .ipKNkI.toggled .spotify-logo {
   font-size: 40px;
+} */
+
+.pro-sidebar.toggled .spotify-logo {
+  font-size: 40px !important;
 }
 
 @media screen and (max-width: 415px) {
