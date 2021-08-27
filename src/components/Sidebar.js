@@ -49,7 +49,10 @@ const Sidebar = () => {
               padding: '20px 5px'
             }}
           >
-            <FaSpotify className='spotify-logo' />
+            <FaSpotify
+              className='spotify-logo'
+              onClick={() => window.open('https://open.spotify.com/', '_blank')}
+            />
           </div>
         </CDBSidebarFooter>
       </CDBSidebar>
