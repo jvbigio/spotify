@@ -1,6 +1,6 @@
 # Spotify Clone
 
-A responsive React application that fetches Tweets from Twitter's API.
+A responsive React application that fetches music artists, albums, or songs from Spotify's API.
 
 See it [here](https://spotify-clone-jb.herokuapp.com/)
 
