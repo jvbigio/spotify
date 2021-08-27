@@ -96,9 +96,21 @@ button:focus, input {
     flex-direction: column;
     margin-left: 0;
     padding-left: 0;
+    /* orig 50px: */
     margin-top: 50px;
+    margin-top: 25px;
     width: 95%;
   }
+  /* .artist-cards {
+    margin-top: 0;
+  } */
+  #response-data > .artist-card.card {
+    margin-top: 90px;
+    padding-top: 0;
+  }
+  /* .artist-card.card {
+    margin-top: 0;
+  } */
   .response-cards .album-card.card {
     display: flex;
     justify-content: center;
