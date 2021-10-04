@@ -36,16 +36,15 @@ const Search = () => {
     e.preventDefault()
 
     try {
-      await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
-        .then(response => {
-          if (dropDownValue === 'artist') {
-            setSearchResults(response.data.artists.items)
-          } else if (dropDownValue === 'album') {
-            setSearchResults(response.data.albums.items)
-          } else if (dropDownValue === 'track') {
-            setSearchResults(response.data.tracks.items)
-          }
-        })
+      const response = await axios.get(`https://api.spotify.com/v1/search?q=${searchInput}&type=${dropDownValue}&limit=5`)
+
+      if (dropDownValue === 'artist') {
+        setSearchResults(response.data.artists.items)
+      } else if (dropDownValue === 'album') {
+        setSearchResults(response.data.albums.items)
+      } else if (dropDownValue === 'track') {
+        setSearchResults(response.data.tracks.items)
+      }
     } catch (err) {
       console.log(err)
     }
