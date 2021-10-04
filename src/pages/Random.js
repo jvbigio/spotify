@@ -3,37 +3,37 @@ import './Random.css'
 import RandomCards from '../components/RandomCards'
 import SongCards from '../components/SongCards'
 
+import { FAV_ARTISTS } from '../artists'
+
 import axios from 'axios'
 
-import drake from '../images/drake.jpeg'
-import linkinPark from '../images/linkin-park.jpeg'
-import metallica from '../images/metallica.jpeg'
-import theWeeknd from '../images/the-weeknd.jpeg'
-import tiesto from '../images/tiesto.jpeg'
+// import drake from '../images/drake.jpeg'
+// import linkinPark from '../images/linkin-park.jpeg'
+// import metallica from '../images/metallica.jpeg'
+// import theWeeknd from '../images/the-weeknd.jpeg'
+// import tiesto from '../images/tiesto.jpeg'
 
 const Random = () => {
-  const [favArtists, setFavArtists] = useState([
-    { id: '3TVXtAsR1Inumwj472S9r4', name: 'Drake', imageSrc: drake },
-    { id: '6XyY86QOPPrYVGvF9ch6wz', name: 'Linkin Park', imageSrc: linkinPark },
-    { id: '2ye2Wgw4gimLv2eAKyk1NB', name: 'Metallica', imageSrc: metallica },
-    { id: '1Xyo4u8uXC1ZmMpatF05PJ', name: 'The Weeknd', imageSrc: theWeeknd },
-    { id: '2o5jDhtHVPhrJdv3cEQ99Z', name: 'Tiesto', imageSrc: tiesto }
-  ])
+  // const FAV_ARTISTS = [
+  //   { id: '3TVXtAsR1Inumwj472S9r4', name: 'Drake', imageSrc: drake },
+  //   { id: '6XyY86QOPPrYVGvF9ch6wz', name: 'Linkin Park', imageSrc: linkinPark },
+  //   { id: '2ye2Wgw4gimLv2eAKyk1NB', name: 'Metallica', imageSrc: metallica },
+  //   { id: '1Xyo4u8uXC1ZmMpatF05PJ', name: 'The Weeknd', imageSrc: theWeeknd },
+  //   { id: '2o5jDhtHVPhrJdv3cEQ99Z', name: 'Tiesto', imageSrc: tiesto }
+  // ]
 
   const [randomSong, setRandomSong] = useState([])
 
   const handleClick = async (id) => {
     try {
-      await axios.get(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=us&limit=1`)
-        .then(response => {
-          setRandomSong(response.data.tracks)
-        })
+      const response = await axios.get(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=us&limit=1`)
+      setRandomSong(response.data.tracks)
     } catch (err) {
       console.log(err)
     }
   }
 
-  const getRandomCards = favArtists.map(artist => {
+  const getRandomCards = FAV_ARTISTS.map(artist => {
     return (
       <RandomCards
         key={artist.id}
